@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pavel Vesnin | 3D Artist</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">Home</a>
+        <a href="index.html" class="logo">
+            <img src="assets/pics/logo.jpg" alt="Pavel Vesnin Logo">
+        </a>
         <nav>
             <a href="#showcase">3D Assets Showcase</a>
             <a href="#portfolio">Portfolio</a>
@@ -20,16 +27,33 @@
         <section class="hero">
             <div class="hero-left">
                 <h1>PAVEL VESNIN</h1>
-                <p>3D ARTIST<br>TECHNICAL ARTIST</p>
             </div>
-            <div class="divider"></div>
             <div class="hero-right">
-                <h2>ABOUT ME</h2>
-                <p>Hi, I'm Pavel, xx.</p>
-
-                <p>My passion is xx<br>
+                <p class="role">3D ARTIST / TECHNICAL ARTIST</p>
             </div>
         </section>
+
+        <section class="about hidden">
+            <h2>ABOUT ME</h2>
+            <p>Hi, I'm Pavel, xx.</p>
+            <p>My passion is xx</p>
+        </section>
+
+        <section id="showcase" class="hidden">
+    <div class="showcase-wrapper">
+        <div class="showcase-description">
+            <h2>Tailor's Workshop</h2>
+            <p>This asset pack includes a collection of high-quality models themed around a tailor's workspace. Perfect for game environments and virtual sets.</p>
+        </div>
+        <div class="showcase-preview">
+            <a href="projects/tailors_workshop.html">
+                <img class="preview-image" src="assets/pics/Iron_01.jpg" alt="Tailor's Workshop Preview">
+            </a>
+        </div>
+    </div>
+</section>
     </main>
+
+    <script src="scripts/main.js" defer></script>
 </body>
 </html>
