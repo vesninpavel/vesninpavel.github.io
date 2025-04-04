@@ -131,9 +131,18 @@ main {
     text-align: left;
 }
 
-.showcase-description h2 {
+.showcase-description h2 { 
     font-size: 1.8rem;
     margin-bottom: 10px;
+}
+.showcase-description h2 a {
+    color: inherit;             /* Наследует цвет заголовка */
+    text-decoration: none;      /* Убирает подчёркивание */
+}
+
+.showcase-description h2 a:hover {
+    text-decoration: underline; /* Можно оставить подчёркивание при наведении */
+    color: #555;                /* И чуть темнее при наведении */
 }
 
 .showcase-description p {
@@ -145,6 +154,7 @@ main {
     flex: 1.8;
     min-width: 300px;
     position: relative;
+	z-index: 0;
 }
 
 .preview-image {
@@ -156,13 +166,15 @@ main {
 
 .showcase-preview::after {
     content: '';
-    background-image: url('../assets/pics/Basket_1200x1200.jpg');
+    background-image: url('../assets/pics/Iron_1.png');
     background-size: cover;
     background-position: center;
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
+	z-index: 1;
+    pointer-events: none; /* ← это важно! */
 }
 
 .showcase-preview:hover::after {
