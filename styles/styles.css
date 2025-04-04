@@ -44,7 +44,7 @@ nav a:hover {
 }
 
 main {
-    padding-top: 60px;
+    padding-top: 30px;
 }
 
 .hero {
@@ -150,49 +150,32 @@ main {
     line-height: 1.6;
 }
 
-
 .preview-image {
     width: 100%;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
     height: auto;
     display: block;
     transition: opacity 0.3s ease;
 }
-
-.showcase-preview::after {
-    content: '';
-    background-image: url('../assets/pics/Iron_1.png');
-    background-size: cover;
-    background-position: center;
+.preview-image.hover {
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
-    z-index: 1;
-    pointer-events: none;
+    z-index: 2;
 }
 
-/* Preview hover image replacement — Survival */
-.showcase-preview:has(img[src*="Iron_Preview.png"])::after {
-    content: '';
-    background-image: url('../assets/pics/Iron_1.png');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    z-index: 1;
-    pointer-events: none;
-}
 
 .showcase-preview {
     flex: 1.8;
     min-width: 300px;
     position: relative;
-	z-index: 0;
+	display: inline-block;
 }	
 
-.showcase-preview:hover::after {
+.showcase-preview:hover .preview-image.hover {
     opacity: 1;
 }
 
