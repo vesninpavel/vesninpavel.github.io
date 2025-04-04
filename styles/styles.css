@@ -150,12 +150,6 @@ main {
     line-height: 1.6;
 }
 
-.showcase-preview {
-    flex: 1.8;
-    min-width: 300px;
-    position: relative;
-	z-index: 0;
-}
 
 .preview-image {
     width: 100%;
@@ -173,9 +167,30 @@ main {
     top: 0; left: 0; right: 0; bottom: 0;
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
-	z-index: 1;
-    pointer-events: none; /* ← это важно! */
+    z-index: 1;
+    pointer-events: none;
 }
+
+/* Preview hover image replacement — Survival */
+.showcase-preview:has(img[src*="Iron_Preview.png"])::after {
+    content: '';
+    background-image: url('../assets/pics/Iron_1.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.showcase-preview {
+    flex: 1.8;
+    min-width: 300px;
+    position: relative;
+	z-index: 0;
+}	
 
 .showcase-preview:hover::after {
     opacity: 1;
