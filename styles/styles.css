@@ -1,82 +1,101 @@
-/* Подключение шрифта */
+
 body {
-    font-family: 'Inter', sans-serif;
     margin: 0;
-    padding: 0;
-    color: white;
-    text-align: center;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Глобальные стили */
-html {
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-}
-
-/* Секции на всю высоту экрана */
-section {
-    height: 100vh;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
-    font-size: 1.5rem;
-    scroll-snap-align: start;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    z-index: 1000;
 }
 
-/* Фон для разных секций */
-#home {
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-}
-
-#portfolio {
-    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
-}
-
-#contact {
-    background: linear-gradient(135deg, #ff758c, #ff7eb3);
-}
-
-/* Заголовки */
-h1, h2 {
+.logo {
     font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
 }
 
-p {
-    font-weight: 300;
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
 }
 
-/* Галерея */
-.gallery {
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding-top: 60px; /* отступ под фиксированную шапку */
+}
+
+
+
+.hero {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    align-items: center;
+    min-height: 90vh;
+    padding: 100px 40px 40px 40px;
+    box-sizing: border-box;
 }
 
-.project img {
-    width: 300px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.hero-left {
+    flex: 1;
+    text-align: left;
 }
 
-    .project img:hover {
-        transform: scale(1.05);
-    }
+.hero-left h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+    color: #111;
+}
 
-/* Кнопки-прокрутки */
-a {
-    color: white;
+.hero-left p {
+    font-size: 1rem;
+    color: #222;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.divider {
+    width: 1px;
+    background-color: #ccc;
+    height: 60%;
+    margin: 0 40px;
+}
+
+.hero-right {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-right h2 {
     font-size: 1.2rem;
-    margin-top: 20px;
-    text-decoration: none;
-    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #222;
 }
 
-    a:hover {
-        text-decoration: underline;
-    }
+.hero-right p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: left;
+}
