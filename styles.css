@@ -1,0 +1,82 @@
+/* Подключение шрифта */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+}
+
+/* Глобальные стили */
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+/* Секции на всю высоту экрана */
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    scroll-snap-align: start;
+}
+
+/* Фон для разных секций */
+#home {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+#portfolio {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+}
+
+#contact {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+/* Заголовки */
+h1, h2 {
+    font-weight: 600;
+}
+
+p {
+    font-weight: 300;
+}
+
+/* Галерея */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.project img {
+    width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .project img:hover {
+        transform: scale(1.05);
+    }
+
+/* Кнопки-прокрутки */
+a {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
