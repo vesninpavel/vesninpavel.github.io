@@ -44,20 +44,45 @@ nav a:hover {
 }
 
 main {
-    padding-top: 30px;
+    padding-top: 0px;
 }
 
 .hero {
     display: flex;
     background-color: #F6F5F2;
+	background: linear-gradient(0deg, #E3E1D9, #F6F5F2);
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 40px;
     box-sizing: border-box;
-    height: 100vh;
+    height: 60vh;
 }
 
+.hero-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+
+}
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left, .hero-right {
+        flex: none;
+        width: 100%;
+    }
+
+    .hero-image {
+        max-width: 90%;
+        margin-top: 20px;
+    }
+}
 .hero-left {
     flex: 2;
     min-width: 200px;
@@ -93,6 +118,7 @@ main {
     color: #222;
     text-align: center;
     padding: 80px 40px;
+	height: 40vh;
 }
 
 .about h2 {
