@@ -9,8 +9,8 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
-    background-color: rgba(243, 208, 215, 0.9);
+    height: 30px;
+    background-color: rgba(62, 63, 91, 0.9);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +21,7 @@ header {
 
 .logo {
     display: flex;
-    align-items: center;
+    align-items: bottom;
     height: 100%;
 }
 
@@ -34,7 +34,7 @@ header {
 nav a {
     margin-left: 20px;
     text-decoration: none;
-    color: #333;
+    color: #fffbed;
     font-size: 14px;
     font-weight: 500;
 }
@@ -49,12 +49,11 @@ main {
 
 .hero {
     display: flex;
-    background-color: #F6F5F2;
-	background: linear-gradient(0deg, #E3E1D9, #F6F5F2);
+    background-color: #FDFAF6;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 40px;
+    padding: 80px;
     box-sizing: border-box;
     height: 60vh;
 }
@@ -64,8 +63,27 @@ main {
     max-width: 400px;
     height: auto;
     border-radius: 12px;
-
 }
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../assets/pics/background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    opacity: 0.4; /* Только фон! */
+    pointer-events: none;
+}
+
+/* Контент выше фона */
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+
 /* Адаптация для мобильных */
 @media (max-width: 768px) {
     .hero {
@@ -106,15 +124,15 @@ main {
     justify-content: flex-start;
 }
 
-.hero-right .role {
+/* .hero-right .role {
     font-size: 1.2rem;
     color: #444;
     font-weight: 500;
     margin: 0;
-}
+} */
 
 .about {
-    background-color: #E3E1D9;
+    background-color: #CCD3CA;
     color: #222;
     text-align: center;
     padding: 80px 40px;
@@ -135,7 +153,7 @@ main {
 
 #showcase {
     background-color: #F6F5F2;
-    padding: 80px 40px;
+    padding: 40px 40px;
     color: #222;
     text-align: center;
 }
@@ -203,6 +221,23 @@ main {
 
 .showcase-preview:hover .preview-image.hover {
     opacity: 1;
+}
+
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25px;
+    background-color: rgba(62, 63, 91, 0.9);
+    color: #fffbed;
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    box-shadow: 0 -1px 3px rgba(0,0,0,0.1);
+    z-index: 1000;
 }
 
 /* Scroll Reveal Animation — modern version */
