@@ -65,23 +65,7 @@ main {
     border-radius: 12px;
 }
 
-/* .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('../assets/pics/background.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: 0;
-    opacity: 0.1; 
-    pointer-events: none;
-} */
 
-/* Контент выше фона 
-.hero > * {
-    position: relative;
-    z-index: 1;
-}*/
 
 
 /* Адаптация для мобильных */
