@@ -65,7 +65,7 @@ main {
     border-radius: 12px;
 }
 
-.hero::before {
+/* .hero::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -73,15 +73,15 @@ main {
     background-size: cover;
     background-position: center;
     z-index: 0;
-    opacity: 0.4; /* Только фон! */
+    opacity: 0.1; 
     pointer-events: none;
-}
+} */
 
-/* Контент выше фона */
+/* Контент выше фона 
 .hero > * {
     position: relative;
     z-index: 1;
-}
+}*/
 
 
 /* Адаптация для мобильных */
