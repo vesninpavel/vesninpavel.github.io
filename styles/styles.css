@@ -52,12 +52,14 @@ main {
     display: flex;
 	margin: 80px;
     background-color: #F7F7F7 ;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center; 
     padding: 40px;
     box-sizing: border-box;
     height: 60vh;
 	padding-top: 40px;
+	flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .hero-left {
