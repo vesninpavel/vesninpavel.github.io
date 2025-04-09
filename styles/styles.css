@@ -19,7 +19,47 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     z-index: 1000;
 }
+.dropdown {
+  position: relative;
+  display: inline-block;
 
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: #fffbed;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fffbed;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1001;
+  margin-top: 6px;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 10px 16px;
+  display: block;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.dropdown-content a:hover {
+  background-color: #e6e6e6;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
 .logo {
     display: flex;
     align-items: bottom;
