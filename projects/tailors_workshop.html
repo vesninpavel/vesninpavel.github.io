@@ -7,7 +7,7 @@
     <link rel="icon" href="../assets/pics/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <button class="toggle-btn" onclick="toggleSidebar()">☰ </button>
+    <button class="toggle-btn" onclick="toggleSidebar()"> < </button>
     <div class="container">
         <div class="sidebar" id="sidebar">
             <h1>Tailor's Workshop</h1>
@@ -37,8 +37,8 @@
                     </div>
                 </div>
                 <div class="tile">
-                    <img src="../pics/model3.jpg" alt="Model 3">
-                    <h4>Model 3</h4>
+                    <img src="../assets/pics/Ladder_Preview_01.jpg" alt="Ladder">
+                    <h4>Ladder</h4>
                     <div class="links">
                         <a href="#">Unreal</a>
                         <a href="#">Sketchfab</a>
@@ -50,10 +50,8 @@
         </div>
     </div>
 
-    <script>
-        function toggleSidebar() {
-            document.getElementById('sidebar').classList.toggle('hidden');
-        }
-    </script>
+    
+    <script src="../scripts/toggle_sidebar.js"></script>
+   
 </body>
 </html>

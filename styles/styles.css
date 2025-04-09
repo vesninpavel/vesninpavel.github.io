@@ -295,18 +295,19 @@ section.showcase.alt .showcase-wrapper {
 .container {
     display: flex;
     min-height: 100vh;
+    transition: all 0.3s ease;
 }
 
 .sidebar {
-    width: 200px;
+    width: 300px;
     padding: 30px;
     background-color: #EDEDED;
     color: #333;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .sidebar.hidden {
-    transform: translateX(-100%);
+    display: none;
 }
 
 .toggle-btn {
@@ -326,6 +327,12 @@ section.showcase.alt .showcase-wrapper {
     padding: 30px;
     background-color: #F7F7F7;
     color: #333;
+    transition: all 0.3s ease;
+}
+
+.container.fullwidth .main-content {
+    flex: 1 1 100%;
+    max-width: 100%;
 }
 
 .grid {
@@ -335,10 +342,11 @@ section.showcase.alt .showcase-wrapper {
 }
 
 .tile {
-    background-color: #222;
+    background-color: #3d3d3d;
     padding: 10px;
     border-radius: 8px;
     text-align: center;
+    color: #F7F7F7;
 }
 
 .tile img {
