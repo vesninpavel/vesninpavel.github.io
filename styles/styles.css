@@ -288,3 +288,77 @@ section.showcase.alt .showcase-wrapper {
 #showcase.visible {
     transition-delay: 0.4s;
 }
+
+/* === Existing styles above === */
+
+/* Tailor's Workshop layout */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    padding: 30px;
+    background-color: #EDEDED;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    background-color: #333;
+    color: #F7F7F7;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #F7F7F7;
+    color: #333;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.tile {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tile img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.tile h4 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+}
+
+.tile .links a {
+    display: inline-block;
+    margin: 0 5px;
+    color: #00adee;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.tile .links a:hover {
+    text-decoration: underline;
+}

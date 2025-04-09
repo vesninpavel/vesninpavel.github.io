@@ -1,101 +1,59 @@
-<section id="asset-page">
-    <!-- Кнопка Home -->
-    <div class="home-button">
-        <a href="index.html">Home</a>
-    </div>
-
-    <div class="asset-container">
-        <div class="asset-text">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tailor's Workshop</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="icon" href="../assets/pics/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleSidebar()">☰ </button>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
             <h1>Tailor's Workshop</h1>
             <p>A set of high-quality assets for a tailor's workshop.</p>
-            <div class="asset-description">
-                <h3>Description</h3>
-                <p>This set includes high-quality 3D models designed for a tailor's workshop, perfect for realistic rendering and virtual environments.</p>
+            <h3>Description</h3>
+            <p>This set includes high-quality 3D models designed for a tailor's workshop, perfect for realistic rendering and virtual environments.</p>
+        </div>
+
+        <div class="main-content">
+            <div class="grid">
+                <div class="tile">
+                    <img src="../assets/pics/Needles_Preview_02.jpg" alt="Needles">
+                    <h4>Needles</h4>
+                    <div class="links">
+                        <a href="#">Unreal</a>
+                        <a href="#">Sketchfab</a>
+                        <a href="#">ArtStation</a>
+                    </div>
+                </div>
+                <div class="tile">
+                    <img src="../assets/pics/Iron_01.jpg" alt="Iron">
+                    <h4>Iron</h4>
+                    <div class="links">
+                        <a href="#">Unreal</a>
+                        <a href="#">Sketchfab</a>
+                        <a href="#">ArtStation</a>
+                    </div>
+                </div>
+                <div class="tile">
+                    <img src="../pics/model3.jpg" alt="Model 3">
+                    <h4>Model 3</h4>
+                    <div class="links">
+                        <a href="#">Unreal</a>
+                        <a href="#">Sketchfab</a>
+                        <a href="#">ArtStation</a>
+                    </div>
+                </div>
+                <!-- Add more tiles as needed -->
             </div>
         </div>
-        <div class="asset-images">
-            <h3>Model 1</h3>
-            <a href="model1_link">
-                <img src="pics/model1.jpg" alt="Model 1">
-            </a>
-            <h3>Model 2</h3>
-            <a href="model2_link">
-                <img src="pics/model2.jpg" alt="Model 2">
-            </a>
-            <h3>Model 3</h3>
-            <a href="model3_link">
-                <img src="pics/model3.jpg" alt="Model 3">
-            </a>
-        </div>
     </div>
-</section>
 
-<style>
-    body {
-        background-color: #fff;
-        color: white;
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-
-    #asset-page {
-        padding: 50px;
-    }
-
-    .home-button {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .home-button a {
-        color: white;
-        background-color: #333;
-        padding: 10px 20px;
-        text-decoration: none;
-        font-size: 16px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    .home-button a:hover {
-        background-color: #555;
-    }
-
-    .asset-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    .asset-text {
-        flex: 1;
-        max-width: 600px;
-    }
-
-    .asset-text h1, .asset-text p, .asset-description h3, .asset-description p {
-        color: white; /* Set text to white */
-    }
-
-    .asset-description {
-        margin-top: 20px;
-    }
-
-    .asset-images {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .asset-images img {
-        width: 300px;
-        margin: 10px;
-    }
-
-    .asset-images h3 {
-        color: white;
-        margin-top: 10px;
-    }
-</style>
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
