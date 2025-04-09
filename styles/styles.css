@@ -53,7 +53,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 80px;
+    padding: 160px;
     box-sizing: border-box;
     height: 60vh;
 }
@@ -116,7 +116,7 @@ main {
 } */
 
 .about {
-    background-color: #F7F7F7;
+    background-color: #EDEDED;
     color: #222;
     text-align: center;
     padding: 80px 40px;
@@ -148,9 +148,18 @@ main {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 100px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* альтернативный фон и порядок */
+section.showcase.alt {
+  background-color: #EDEDED;
+}
+
+section.showcase.alt .showcase-wrapper {
+  flex-direction: row-reverse;
 }
 
 .showcase-description {
