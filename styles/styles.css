@@ -80,7 +80,7 @@ main {
   font-size: 1rem;
   padding: 0 10px 0 10px;
   line-height: 1.6;
-  background-color: #F7F7F7;
+
   color: #333;
   max-width: 600px;
 }
@@ -111,7 +111,7 @@ main {
     }
 
     .hero-left, .hero-right {
-        flex: none;
+        flex: space-between;
         width: 100%;
     }
 
