@@ -407,7 +407,7 @@ section.showcase.alt {
 .links {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 6px;
 }
 
     .links a {
@@ -417,8 +417,64 @@ section.showcase.alt {
         font-size: 14px;
         text-decoration: none;
     }
+        .links a.disabled {
+            color: #aaa;
+            pointer-events: none;
+            text-decoration: line-through;
+            cursor: default;
+            opacity: 0.6;
+        }
 
+.disabled a {
+    color: #aaa;
+    pointer-events: none;
+    text-decoration: line-through;
+    opacity: 0.6;
+    cursor: default;
+}
         .links a:hover {
             text-decoration: underline;
             color: #FF9149;
         }
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+    .modal.hidden {
+        display: none;
+    }
+
+.modal-content {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 900px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+    .modal-content img {
+        max-width: 100%;
+        border-radius: 6px;
+        margin-bottom: 20px;
+    }
+
+    .modal-content .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 32px;
+        color: #333;
+        cursor: pointer;
+    }

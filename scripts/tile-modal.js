@@ -1,0 +1,25 @@
+﻿const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modal-img');
+const modalTitle = document.getElementById('modal-title');
+const modalDesc = document.getElementById('modal-description');
+const modalLinks = document.getElementById('modal-links');
+
+document.querySelectorAll('.tile').forEach(tile => {
+    tile.addEventListener('click', () => {
+        const img = tile.querySelector('img').src;
+        const title = tile.querySelector('h4').textContent;
+        const desc = tile.dataset.description || 'No description yet.';
+        const links = tile.querySelector('.links').innerHTML;
+
+        modalImg.src = img;
+        modalTitle.textContent = title;
+        modalDesc.textContent = desc;
+        modalLinks.innerHTML = links;
+
+        modal.classList.remove('hidden');
+    });
+});
+
+document.querySelector('.modal .close').addEventListener('click', () => {
+    modal.classList.add('hidden');
+});

@@ -22,7 +22,7 @@
                 <h1>Tailor's Workshop</h1>
                 <p>A set of high-quality assets for a tailor's workshop.</p>
                 <p>This set includes high-quality 3D models designed for a tailor's workshop, perfect for realistic rendering and virtual environments.</p>
-                <div class="links">
+                <div class="disabled">
                     <a href="https://www.cgtrader.com/" target="_blank">CgTrader</a>
                     <a href="https://www.artstation.com/" target="_blank">ArtStation</a>
                     <a href="https://fab.com/" target="_blank">Fab</a>
@@ -33,11 +33,11 @@
 
             <div class="tile">
                 <img src="../assets/pics/Needles_Preview_02.jpg" alt="Needles">
-                <h4>Needles</h4>
+                <h4>Needle Cushion Thimble Pins</h4>
                 <div class="links">
-                    <a href="#">Fab</a>
-                    <a href="#">CgTrader</a>
-                    <a href="#">ArtStation</a>
+                    <a href="#" class="disabled" title="Coming soon">Fab</a>
+                    <a href="https://www.cgtrader.com/3d-models/household/household-tools/needle-cushion-thimble-pins" target="_blank">CgTrader</a>
+                    <a href="https://assetstore.unity.com/packages/3d/props/tools/needle-cushion-thimble-pins-313296" target="_blank">Unity</a>
                 </div>
             </div>
             <div class="tile">
@@ -91,6 +91,15 @@
     
     </div>
     </div>
-
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-img" src="" alt="Preview">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <div class="links" id="modal-links"></div>
+        </div>
+    </div>
+<script src="../scripts/tile-modal.js"></script>
 </body>
 </html>
