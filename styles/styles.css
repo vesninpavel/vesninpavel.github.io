@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-	background-color: #F7F7F7;
+    background-color: #F7F7F7;
 }
 
 header {
@@ -19,20 +19,20 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     z-index: 1000;
 }
-.dropdown {
-  position: relative;
-  display: inline-block;
 
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
 .dropbtn {
-  background: none;
-  border: none;
-  color: #fffbed;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  margin-left: 20px;
+    background: none;
+    border: none;
+    color: #fffbed;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 20px;
 }
 
 .dropdown-content {
@@ -45,32 +45,33 @@ header {
     margin-top: 6px;
 }
 
-.dropdown-content a {
-  color: #333;
-  padding: 10px 16px;
-  display: block;
-  text-decoration: none;
-  font-size: 13px;
-}
+    .dropdown-content a {
+        color: #333;
+        padding: 10px 16px;
+        display: block;
+        text-decoration: none;
+        font-size: 13px;
+    }
 
-.dropdown-content a:hover {
-  background-color: #e6e6e6;
-}
+        .dropdown-content a:hover {
+            background-color: #e6e6e6;
+        }
 
 .dropdown.open .dropdown-content {
-  display: block;
+    display: block;
 }
+
 .logo {
     display: flex;
     align-items: bottom;
     height: 100%;
 }
 
-.logo img {
-    height: 42px;
-    width: auto;
-    display: block;
-}
+    .logo img {
+        height: 42px;
+        width: auto;
+        display: block;
+    }
 
 nav a {
     margin-left: 20px;
@@ -80,9 +81,9 @@ nav a {
     font-weight: 500;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
+    nav a:hover {
+        text-decoration: underline;
+    }
 
 main {
     padding-top: 0px;
@@ -90,60 +91,60 @@ main {
 
 .hero {
     display: flex;
-	margin: 80px;
-    background-color: #F7F7F7 ;
-    /* justify-content: center; */
-    align-items: center; 
+    margin: 80px;
+    background-color: #F7F7F7;
+    align-items: center;
     padding: 40px;
     box-sizing: border-box;
     height: 60vh;
-	padding-top: 40px;
-	flex-wrap: wrap;
+    padding-top: 40px;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .hero-left {
-	padding: 0 10px 0 10px;
+    padding: 0 10px 0 10px;
     flex: 2;
     min-width: 200px;
     text-align: left;
 }
 
-.hero-left h1 {
-    font-size: 4rem;
-    font-weight: 400;
-    line-height: 1.1;
-    margin: 0 0 20px 0;
-    color: #333;
-}
+    .hero-left h1 {
+        font-size: 4rem;
+        font-weight: 400;
+        line-height: 1.1;
+        margin: 0 0 20px 0;
+        color: #333;
+    }
+
 .hero-right .about-text {
-  font-size: 1rem;
-  padding: 0 10px 0 10px;
-  line-height: 1.6;
-
-  color: #333;
-  max-width: 600px;
+    font-size: 1rem;
+    padding: 0 10px 0 10px;
+    line-height: 1.6;
+    color: #333;
+    max-width: 600px;
 }
+
 .hero-contacts {
-  margin-top: 20px;
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  align-items: center;
+    margin-top: 20px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-.hero-contacts .icon {
-  width: 30px;
-  height: 30px;
-  opacity: 0.7;
-  filter: invert(0.1);
-  transition: opacity 0.2s ease;
-}
+    .hero-contacts .icon {
+        width: 30px;
+        height: 30px;
+        opacity: 0.7;
+        filter: invert(0.1);
+        transition: opacity 0.2s ease;
+    }
 
-.hero-contacts .icon:hover {
-  opacity: 1;
-}
-/* Адаптация для мобильных */
+        .hero-contacts .icon:hover {
+            opacity: 1;
+        }
+/* Mobile */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -154,7 +155,6 @@ main {
         flex: space-between;
         width: 100%;
     }
-
 }
 
 #showcase {
@@ -175,14 +175,14 @@ main {
     margin: 0 auto;
 }
 
-/* альтернативный фон и порядок */
+/* alt back and order */
 section.showcase.alt {
-  background-color: #EDEDED;
+    background-color: #EDEDED;
 }
 
-section.showcase.alt .showcase-wrapper {
-  flex-direction: row-reverse;
-}
+    section.showcase.alt .showcase-wrapper {
+        flex-direction: row-reverse;
+    }
 
 .showcase-description {
     flex: 1;
@@ -190,94 +190,96 @@ section.showcase.alt .showcase-wrapper {
     text-align: left;
 }
 
-.showcase-description h2 { 
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-.showcase-description h2 a {
-    color: inherit;             /* Наследует цвет заголовка */
-    text-decoration: none;      /* Убирает подчёркивание */
-}
+    .showcase-description h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
 
-.showcase-description h2 a:hover {
-    text-decoration: underline; /* Можно оставить подчёркивание при наведении */
-    color: #555;                /* И чуть темнее при наведении */
-}
+        .showcase-description h2 a {
+            color: inherit; /* Наследует цвет заголовка */
+            text-decoration: none; /* Убирает подчёркивание */
+        }
 
-.showcase-description p {
-    font-size: 1rem;
-    line-height: 1.6;
-}
+            .showcase-description h2 a:hover {
+                text-decoration: underline; /* Можно оставить подчёркивание при наведении */
+                color: #555; /* И чуть темнее при наведении */
+            }
+
+    .showcase-description p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 
 .preview-image {
     width: 100%;
-	aspect-ratio: 16 / 9;
-	object-fit: cover;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
     height: auto;
     display: block;
     transition: opacity 0.3s ease;
 }
-.preview-image.hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    z-index: 2;
-}
 
-.preview-image.ready {
-  transition: transform 0.3s ease;
-}
+    .preview-image.hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+        z-index: 2;
+    }
 
-.preview-image.ready:hover {
-  transform: scale(1.03);
-}
+    .preview-image.ready {
+        transition: transform 0.3s ease;
+    }
+
+        .preview-image.ready:hover {
+            transform: scale(1.03);
+        }
 
 .showcase-preview {
     flex: 1.8;
     min-width: 300px;
     position: relative;
-	display: inline-block;
-}	
-
-.showcase-preview:hover .preview-image.hover {
-    opacity: 1;
+    display: inline-block;
 }
+
+    .showcase-preview:hover .preview-image.hover {
+        opacity: 1;
+    }
 
 .footer-content {
     background-color: rgba(62, 63, 91, 0.9);
     color: #fffbed;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: 12px;
     padding: 12px;
     margin-top: 40px;
-	height: 12px;
+    height: 12px;
 }
 
 .footer-icons {
-  margin-top: 2px;
-  margin-left: 6px;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
+    margin-top: 2px;
+    margin-left: 6px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
 }
 
 .footer-icon {
-  width: 18px;
-  height: 18px;
-  margin: 0 4px;
-  filter: invert(1); /* делает иконки белыми */
-  opacity: 0.7;
-  transition: opacity 0.2s ease;
+    width: 18px;
+    height: 18px;
+    margin: 0 4px;
+    filter: invert(1); /* делает иконки белыми */
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
 }
 
-.footer-icon:hover {
-  opacity: 1;
-}
+    .footer-icon:hover {
+        opacity: 1;
+    }
 
 /* Scroll Reveal Animation — modern version */
 .hidden {
@@ -299,18 +301,66 @@ section.showcase.alt .showcase-wrapper {
 /* === Existing styles above === */
 
 /* Tailor's Workshop layout */
+
 .container {
     display: flex;
-    min-height: 100vh;
+    flex-direction: column;
     transition: all 0.3s ease;
     margin-top: 60px;
     position: relative;
+    gap: 40px;
+    padding: 0 30px;
 }
+
+.description-section {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: inset 0 0px 6px rgba(62, 63, 91, 0.1);
+}
+
+    .description-section .description-image {
+        flex: 1 1 360px;
+        max-width: 800px;
+        margin: 12px;
+    }
+
+        .description-section .description-image img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+        }
+
+    .description-section .description-text {
+        flex: 2;
+        min-width: 300px;
+        
+    }
+
+        .description-section .description-text h1 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            color: #333;
+        }
+
+        .description-section .description-text p {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
 
 .main-content {
     flex: 1;
-    padding: 30px;
+    padding: 10px;
     margin-top: 30px;
+
     background-color: #F7F7F7;
     color: #333;
     transition: all 0.3s ease;
@@ -325,7 +375,8 @@ section.showcase.alt .showcase-wrapper {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    margin: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 20px;
 }
 
@@ -333,7 +384,7 @@ section.showcase.alt .showcase-wrapper {
     background-color: white;
     padding: 10px;
     border-radius: 8px;
-    text-align: center;
+    text-align: left;
     color: #333;
     transition: transform 0.2s ease;
 }
@@ -353,35 +404,21 @@ section.showcase.alt .showcase-wrapper {
         font-size: 16px;
     }
 
-    .tile .links a {
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+    .links a {
         display: inline-block;
-        margin: 0 5px;
-        color: #00adee;
+        margin: 5px 0px;
+        color: #8E7DBE;
         font-size: 14px;
         text-decoration: none;
     }
 
-        .tile .links a:hover {
+        .links a:hover {
             text-decoration: underline;
-        }
-
-    /* Special tile for description */
-    .tile.description-tile {
-        grid-column: span 1;
-        background-color: #eee;
-        color: #333;
-        text-align: left;
-        padding: 20px;
-        font-size: 15px;
-        line-height: 1.6;
-        border: 1px solid #ccc;
-    }
-
-        .tile.description-tile h3 {
-            margin-top: 0;
-            color: #111;
-        }
-
-        .tile.description-tile p {
-            margin-bottom: 10px;
+            color: #FF9149;
         }
