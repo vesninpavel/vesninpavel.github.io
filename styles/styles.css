@@ -296,33 +296,55 @@ section.showcase.alt .showcase-wrapper {
     display: flex;
     min-height: 100vh;
     transition: all 0.3s ease;
-    margin-top: 20px;   
+    margin-top: 20px;
 }
 
 .sidebar {
-    width: 300px;
+    width: 250px;
     padding: 30px;
     background-color: #EDEDED;
     color: #333;
     transition: all 0.3s ease;
+    position: relative;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
 }
 
-.sidebar.hidden {
-    display: none;
-}
+    .sidebar.hidden {
+        transform: translateX(-100%);
+        opacity: 0;
+        pointer-events: none;
+    }
 
-.toggle-btn {
+.toggle-tab {
     position: absolute;
-    top: 70px;
-    left: 30px;
-    background-color: #333;
-    color: #F7F7F7;
-    border: none;
-    padding: 8px 12px;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-100%, -50%);
+    background-color: #EDEDED;
+    color: #333;
+    padding: 10px;
+    border-radius: 0 6px 6px 0;
     cursor: pointer;
-    z-index: 10;
-
+    font-size: 14px;
+    text-align: center;
+    user-select: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
+
+    .toggle-tab.closed {
+        right: 0;
+        left: -40px;
+        border-radius: 6px 0 0 6px;
+       
+    }
+
+    .toggle-tab:hover {
+        background-color: #EDEDED;
+        box-shadow: 3px 0 3px rgba(0, 0, 0, 0.2);
+    }
 
 .main-content {
     flex: 1;
@@ -349,26 +371,32 @@ section.showcase.alt .showcase-wrapper {
     border-radius: 8px;
     text-align: center;
     color: #F7F7F7;
+    transition: transform 0.2s ease;
 }
 
-.tile img {
-    max-width: 100%;
-    border-radius: 6px;
-}
+    .tile:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
 
-.tile h4 {
-    margin: 10px 0 5px;
-    font-size: 16px;
-}
+    .tile img {
+        max-width: 100%;
+        border-radius: 6px;
+    }
 
-.tile .links a {
-    display: inline-block;
-    margin: 0 5px;
-    color: #00adee;
-    font-size: 14px;
-    text-decoration: none;
-}
+    .tile h4 {
+        margin: 10px 0 5px;
+        font-size: 16px;
+    }
 
-.tile .links a:hover {
-    text-decoration: underline;
-}
+    .tile .links a {
+        display: inline-block;
+        margin: 0 5px;
+        color: #00adee;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+        .tile .links a:hover {
+            text-decoration: underline;
+        }
