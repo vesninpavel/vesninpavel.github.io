@@ -226,6 +226,13 @@ section.showcase.alt .showcase-wrapper {
     z-index: 2;
 }
 
+.preview-image.ready {
+  transition: transform 0.3s ease;
+}
+
+.preview-image.ready:hover {
+  transform: scale(1.03);
+}
 
 .showcase-preview {
     flex: 1.8;
@@ -291,8 +298,6 @@ section.showcase.alt .showcase-wrapper {
 
 /* === Existing styles above === */
 
-/* === Existing styles above === */
-
 /* Tailor's Workshop layout */
 .container {
     display: flex;
@@ -320,7 +325,7 @@ section.showcase.alt .showcase-wrapper {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     gap: 20px;
 }
 
@@ -362,7 +367,7 @@ section.showcase.alt .showcase-wrapper {
 
     /* Special tile for description */
     .tile.description-tile {
-        grid-column: span 2;
+        grid-column: span 1;
         background-color: #eee;
         color: #333;
         text-align: left;
