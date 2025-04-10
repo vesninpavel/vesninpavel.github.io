@@ -297,6 +297,7 @@ section.showcase.alt .showcase-wrapper {
     min-height: 100vh;
     transition: all 0.3s ease;
     margin-top: 20px;
+    position: relative;
 }
 
 .sidebar {
@@ -309,6 +310,7 @@ section.showcase.alt .showcase-wrapper {
     transform: translateX(0);
     opacity: 1;
     pointer-events: all;
+    z-index: 1;
 }
 
     .sidebar.hidden {
@@ -330,8 +332,8 @@ section.showcase.alt .showcase-wrapper {
     font-size: 14px;
     text-align: center;
     user-select: none;
-    z-index: 1000;
-    transition: all 0.3s ease;
+    z-index: 10;
+    transition: all 0.2s ease;
 }
 
     .toggle-tab.closed {
