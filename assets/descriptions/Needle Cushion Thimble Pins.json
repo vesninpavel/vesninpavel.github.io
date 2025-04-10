@@ -1,0 +1,57 @@
+{
+    "title": "Needle Cushion Thimble Pins\n",
+    "description": [
+        "Game-ready PBR model ",
+        "",
+        "Created with Blender and Substance Painter.",
+        "Geometry has been checked for bugs, overlapping faces, vertices, etc.",
+        "Rendered for preview with Marmoset.",
+        "Has overlapped UV of several parts to optimize the textures size and texel.",
+        "",
+        "Units: cm",
+        "",
+        "Meshes: 8",
+        "",
+        " - Vertices: 1619",
+        " - Faces: 1728",
+        " - Triangles: 3160",
+        "",
+        "Textures: ",
+        " - Needles 2048x2048 .tga",
+        " - PinCushion 2048x2048 .tga"
+    ],
+    "units": "cm",
+    "geometry": {
+        "meshes": 8,
+        "vertices": 1619,
+        "faces": 1728,
+        "triangles": 3160
+    },
+    "file_formats": [
+        " -  Blender 4.0.2\n -  Marmoset 4 (with the Studio for Previews)\n -  Unity 2022.3.11f1\n -  Unreal 5.4.4 \n -  OBJ \n -  FBX\n"
+    ],
+    "tags": [
+        "vintage",
+        " sewing",
+        " needle",
+        " pincushion",
+        " thimble",
+        " pins",
+        " tailoring",
+        " craft",
+        " embroidery",
+        " stitching",
+        " textile",
+        " fabric",
+        " thread",
+        " safetypin",
+        " leather",
+        " dressmaker",
+        " needlework",
+        " haberdashery",
+        " garment",
+        " fashion"
+    ],
+    "video": "https://youtu.be/feYD_bs4dnA",
+    "contact_note": "If you encounter any questions or issues regarding my models, please feel free to reach out.\nThank You!"
+}

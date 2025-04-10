@@ -23,3 +23,10 @@ document.querySelectorAll('.tile').forEach(tile => {
 document.querySelector('.modal .close').addEventListener('click', () => {
     modal.classList.add('hidden');
 });
+
+// 🔥 Закрытие по клику вне модального окна
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.add('hidden');
+    }
+});
