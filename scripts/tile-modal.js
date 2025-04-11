@@ -16,17 +16,17 @@ document.querySelectorAll('.tile').forEach(tile => {
         modalDesc.textContent = desc;
         modalLinks.innerHTML = links;
 
-        modal.classList.remove('hidden');
+        modal.classList.add('active');     // ⬅️ заменить на 'active'
     });
 });
 
 document.querySelector('.modal .close').addEventListener('click', () => {
-    modal.classList.add('hidden');
+    modal.classList.remove('active');      // ⬅️ тоже заменить
 });
 
-// 🔥 Закрытие по клику вне модального окна
+// Закрытие по фону
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
-        modal.classList.add('hidden');
+        modal.classList.remove('active');
     }
 });

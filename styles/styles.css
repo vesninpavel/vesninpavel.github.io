@@ -1,3 +1,4 @@
+
 :root {
     --color-bg: #F7F7F7;
     --color-text: #333;
@@ -8,10 +9,16 @@
     --color-accent: #FF9149;
     --color-link: #8E7DBE;
 }
-body {
+html, body {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
     font-family: 'Inter', sans-serif;
     background-color: var(--color-bg);
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
 header {
@@ -441,7 +448,7 @@ section.showcase.alt {
     justify-content: flex-end;
     gap: 8px;
     margin-top: auto;
-    padding: 0 10px 10px;
+    padding: 0 10px 0px;
 }
 
     .links a {
@@ -505,8 +512,7 @@ section.showcase.alt {
 
 .modal {
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0; /* равнозначно top: 0; left: 0; right: 0; bottom: 0 */
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.6);
@@ -514,22 +520,40 @@ section.showcase.alt {
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    /* УБЕДИСЬ что вот это есть: */
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+    transition: opacity 0.2s ease, background 0.2s ease;
 }
-
-    .modal.hidden {
-        display: none;
-    }
 
 .modal-content {
     background: white;
     padding: 10px;
     border-radius: 8px;
-    max-width: 900px;
+    max-width: 800px;
     width: 90%;
     text-align: center;
     position: relative;
+    transform: scale(0.96);
+    opacity: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+.modal.active {
+    
+    opacity: 1;
+    pointer-events: auto;
+}
+
+    .modal.active .modal-content {
+        opacity: 1;
+        transform: scale(1);
+    }
     .modal-content img {
         max-width: 100%;
         border-radius: 6px;
