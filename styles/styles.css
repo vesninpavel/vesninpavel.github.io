@@ -13,13 +13,20 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+
+    display: flex;
     width: 100%;
     font-family: 'Inter', sans-serif;
     background-color: var(--color-bg);
     overflow-x: hidden;
     overflow-y: auto;
     box-sizing: border-box;
+    flex-direction: column;
 }
+
+    body > .main-content {
+        flex: 1;
+    }
 
 header {
     position: fixed;
@@ -296,9 +303,8 @@ section.showcase.alt {
     align-items: center;
     text-align: center;
     font-size: 12px;
-    padding: 12px;
-    margin-top: 40px;
-    height: 12px;
+    margin-top: 0px;
+    margin-bottom: 0;
 }
 
 .footer-icons {
@@ -321,13 +327,6 @@ section.showcase.alt {
     .footer-icon:hover {
         opacity: 1;
     }
-
-/* Scroll Reveal Animation — modern version */
-.hidden {
-    opacity: 0;
-    transform: translateY(60px) scale(0.98);
-    transition: opacity 0.8s ease-out, transform 0.9s ease-out;
-}
 
 .visible {
     opacity: 1;
@@ -394,7 +393,6 @@ section.showcase.alt {
             line-height: 1.6;
             margin-bottom: 16px;
         }
-
 
 .main-content {
     flex: 1;
@@ -543,6 +541,9 @@ section.showcase.alt {
     box-sizing: border-box;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
+    .modal-content p#modal-description {
+        white-space: pre-line;
+    } 
 
 .modal.active {
     

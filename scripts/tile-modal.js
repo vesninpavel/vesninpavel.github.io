@@ -8,23 +8,25 @@ document.querySelectorAll('.tile').forEach(tile => {
     tile.addEventListener('click', () => {
         const img = tile.querySelector('img').src;
         const title = tile.querySelector('h4').textContent;
-        const desc = tile.dataset.description || 'No description yet.';
+
+        // ✅ берём описание из .description блока
+        const desc = tile.querySelector('.description')?.innerHTML || 'No description yet.';
+
         const links = tile.querySelector('.links').innerHTML;
 
         modalImg.src = img;
         modalTitle.textContent = title;
-        modalDesc.textContent = desc;
+        modalDesc.innerHTML = desc;
         modalLinks.innerHTML = links;
 
-        modal.classList.add('active');     // ⬅️ заменить на 'active'
+        modal.classList.add('active');
     });
 });
 
 document.querySelector('.modal .close').addEventListener('click', () => {
-    modal.classList.remove('active');      // ⬅️ тоже заменить
+    modal.classList.remove('active');
 });
 
-// Закрытие по фону
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
         modal.classList.remove('active');
