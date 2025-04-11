@@ -1,96 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Tailor's Workshop</title>
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="icon" href="../assets/pics/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="icon" href="../assets/pics/favicon.png" type="image/x-icon" />
 </head>
 <body>
     <header>
         <a href="../index.html" class="logo">
-            <img src="../assets/pics/logo.jpg" alt="Pavel Vesnin Logo">
+            <img src="../assets/pics/logo.jpg" alt="Pavel Vesnin Logo" />
         </a>
     </header>
 
     <div class="main-content">
+        <!-- Описание набора -->
         <section class="description-section">
             <div class="description-image">
-                <img src="../assets/pics/Iron_Preview.png" alt="Tailor's Workshop Preview">
+                <img src="../assets/pics/Iron_Preview.png" alt="Tailor's Workshop Preview" />
             </div>
             <div class="description-text">
-                <h1>Tailor's Workshop</h1>
+                <h1>TAILOR's WORKSHOP</h1>
                 <p>A set of high-quality assets for a tailor's workshop.</p>
                 <p>This set includes high-quality 3D models designed for a tailor's workshop, perfect for realistic rendering and virtual environments.</p>
-                <div class="disabled">
-                    <a href="https://www.cgtrader.com/" target="_blank">CgTrader</a>
-                    <a href="https://www.artstation.com/" target="_blank">ArtStation</a>
-                    <a href="https://fab.com/" target="_blank">Fab</a>
+                <div class="links">
+                    <a href="#" class="store-button disabled" title="Fab — Coming Soon">
+                        <img src="../assets/icons/Fab.png" alt="Fab" />
+                    </a>
+                    <a href="#" class="store-button disabled" title="CgTrader" target="_blank">
+                        <img src="../assets/icons/CgTrader.png" alt="CgTrader logo" />
+                    </a>
+                    <a href="#" class="store-button disabled" title="ArtStation" target="_blank">
+                        <img src="../assets/icons/Unity.png" alt="Unity Store logo" />
+                    </a>
+
                 </div>
             </div>
         </section>
-        <div class="grid">
 
-            <div class="tile">
-                <img src="../assets/pics/Needles_Preview_02.jpg" alt="Needles">
+        <!-- Сетка моделей -->
+        <div class="grid">
+            <div class="tile" data-description="Needle set with thimble, cushion, and pins. PBR materials.">
+                <img src="../assets/pics/Needles_Preview_02.jpg" alt="Needles" />
                 <h4>Needle Cushion Thimble Pins</h4>
                 <div class="links">
-                    <a href="#" class="disabled" title="Coming soon">Fab</a>
-                    <a href="https://www.cgtrader.com/3d-models/household/household-tools/needle-cushion-thimble-pins" target="_blank">CgTrader</a>
-                    <a href="https://assetstore.unity.com/packages/3d/props/tools/needle-cushion-thimble-pins-313296" target="_blank">Unity</a>
+                    <a class="store-button disabled" title="Fab — Coming Soon">
+                        <img src="../assets/icons/Fab.png" alt="Fab" />
+                    </a>
+                    <a href="https://www.cgtrader.com/3d-models/household/household-tools/needle-cushion-thimble-pins" class="store-button" title="CGTrader" target="_blank">
+                        <img src="../assets/icons/CgTrader.png" alt="CgTrader logo" />
+                    </a>
+                    <a href="https://assetstore.unity.com/packages/3d/props/tools/needle-cushion-thimble-pins-313296" class="store-button" title="Unity Store" target="_blank">
+                        <img src="../assets/icons/Unity.png" alt="Unity Store logo" />
+                    </a>
                 </div>
             </div>
-            <div class="tile">
-                <img src="../assets/pics/Iron_01.jpg" alt="Iron">
+
+            <!-- Повторяй плитки по образцу -->
+            <div class="tile" data-description="Classic iron for tailor sets. Optimized mesh and 4K textures.">
+                <img src="../assets/pics/Iron_01.jpg" alt="Iron" />
                 <h4>Iron</h4>
                 <div class="links">
-                    <a href="#">Fab</a>
-                    <a href="#">CgTrader</a>
-                    <a href="#">ArtStation</a>
+                    <a href="#" class="store-button disabled" title="Fab — Coming Soon">
+                        <img src="../assets/icons/Fab.png" alt="Fab" />
+                    </a>
+                    <a href="#" class="store-button disabled" title="CgTrader — Coming Soon" target="_blank">
+                        <img src="../assets/icons/CgTrader.png" alt="CgTrader" />
+                    </a>
+                    <a href="#" class="store-button disabled" title="Unity Store" target="_blank">
+                        <img src="../assets/icons/Unity.png" alt="Unity Store logo" />
+                    </a>
                 </div>
             </div>
-            <div class="tile">
-                <img src="../assets/pics/Iron_01.jpg" alt="Iron">
-                <h4>Iron</h4>
-                <div class="links">
-                    <a href="#">Fab</a>
-                    <a href="#">CgTrader</a>
-                    <a href="#">ArtStation</a>
-                </div>
-            </div>
-            <div class="tile">
-                <img src="../assets/pics/Iron_01.jpg" alt="Iron">
-                <h4>Iron</h4>
-                <div class="links">
-                    <a href="#">Fab</a>
-                    <a href="#">CgTrader</a>
-                    <a href="#">ArtStation</a>
-                </div>
-            </div>
-            <div class="tile">
-                <img src="../assets/pics/Iron_01.jpg" alt="Iron">
-                <h4>Iron</h4>
-                <div class="links">
-                    <a href="#">Fab</a>
-                    <a href="#">CgTrader</a>
-                    <a href="#">ArtStation</a>
-                </div>
-            </div>
-            <div class="tile">
-                <img src="../assets/pics/Ladder_Preview_01.jpg" alt="Ladder">
-                <h4>Ladder</h4>
-                <div class="links">
-                    <a href="#">Fab</a>
-                    <a href="#">CgTrader</a>
-                    <a href="#">ArtStation</a>
-                </div>
-            </div>
+
+            <!-- и так далее... -->
         </div>
     </div>
-    
-    
-    </div>
-    </div>
+
+    <!-- Модалка -->
     <div id="modal" class="modal hidden">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -100,6 +87,7 @@
             <div class="links" id="modal-links"></div>
         </div>
     </div>
-<script src="../scripts/tile-modal.js"></script>
+
+    <script src="../scripts/tile-modal.js"></script>
 </body>
 </html>

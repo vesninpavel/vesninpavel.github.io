@@ -1,8 +1,17 @@
-
+:root {
+    --color-bg: #F7F7F7;
+    --color-text: #333;
+    --color-header-bg: rgba(62, 63, 91, 0.9);
+    --color-button-bg: #f0f0f0;
+    --color-button-hover: #e0e0e0;
+    --color-disabled: #ddd;
+    --color-accent: #FF9149;
+    --color-link: #8E7DBE;
+}
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #F7F7F7;
+    background-color: var(--color-bg);
 }
 
 header {
@@ -38,7 +47,7 @@ header {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f7f7f7;
+    background-color: var(--color-bg);
     min-width: 160px;
     box-shadow: 0 2px 2px rgba(0,0,0,0.1);
     z-index: 1001;
@@ -46,7 +55,7 @@ header {
 }
 
     .dropdown-content a {
-        color: #333;
+        color: var(--color-text);
         padding: 10px 16px;
         display: block;
         text-decoration: none;
@@ -91,21 +100,20 @@ main {
 
 .hero {
     display: flex;
-    margin: 80px;
-    background-color: #F7F7F7;
-    align-items: center;
-    padding: 40px;
-    box-sizing: border-box;
-    height: 60vh;
-    padding-top: 40px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start; /* ← сдвигает влево */
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px 20px;
+    margin: 160px auto 160px auto;
+    max-width: 1400px;
+    box-sizing: border-box;
 }
 
 .hero-left {
+    flex: 2.5 1 300px; /* сжимается, но не меньше 300px */
+    min-width: 0; /* отключает “жесткий” размер */
     padding: 0 10px 0 10px;
-    flex: 2;
-    min-width: 200px;
     text-align: left;
 }
 
@@ -113,16 +121,28 @@ main {
         font-size: 4rem;
         font-weight: 400;
         line-height: 1.1;
-        margin: 0 0 20px 0;
-        color: #333;
+        margin: 0 0 0px 0;
+        color: var(--color-text);
     }
 
-.hero-right .about-text {
-    font-size: 1rem;
-    padding: 0 10px 0 10px;
-    line-height: 1.6;
-    color: #333;
-    max-width: 600px;
+.hero-right {
+    flex: 1 1 500px;
+    padding: 0 10px;
+    color: var(--color-text);
+    min-width: 0;
+    align-self: flex-start;
+}
+
+    .hero-right .about-text {
+        font-size: 1rem;
+        line-height: 1.3;
+        color: var(--color-text);
+    }
+
+.hero h2 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .hero-contacts {
@@ -147,8 +167,8 @@ main {
 /* Mobile */
 @media (max-width: 768px) {
     .hero {
-        flex-direction: column;
-        text-align: center;
+        /*        flex-direction: column;
+        text-align: center;*/
     }
 
     .hero-left, .hero-right {
@@ -157,10 +177,24 @@ main {
     }
 }
 
+.section-title {
+    /*    background-color: var(--color-accent);*/
+    text-align: center;
+    margin-top: 140px;
+    padding: 6px 0px;
+}
+
+    .section-title h1 {
+        font-size: 2.0rem;
+        font-weight: 100;
+        margin: 0;
+        color: var(--color-text);
+    }
+
 #showcase {
-    background-color: #F7F7F7;
+    background-color: var(--color-bg);
     padding: 40px 40px;
-    color: #333;
+    color: var(--color-text);
     text-align: center;
 }
 
@@ -339,18 +373,17 @@ section.showcase.alt {
     .description-section .description-text {
         flex: 2;
         min-width: 300px;
-        
     }
 
         .description-section .description-text h1 {
             font-size: 2rem;
             margin-bottom: 16px;
-            color: #333;
+            color: var(--color-text);
         }
 
         .description-section .description-text p {
             font-size: 14px;
-            color: #333;
+            color: var(--color-text);
             line-height: 1.6;
             margin-bottom: 16px;
         }
@@ -360,9 +393,8 @@ section.showcase.alt {
     flex: 1;
     padding: 10px;
     margin-top: 30px;
-
-    background-color: #F7F7F7;
-    color: #333;
+    background-color: var(--color-bg);
+    color: var(--color-text);
     transition: all 0.3s ease;
     position: relative;
     z-index: 0;
@@ -385,7 +417,7 @@ section.showcase.alt {
     padding: 10px;
     border-radius: 8px;
     text-align: left;
-    color: #333;
+    color: var(--color-text);
     transition: transform 0.2s ease;
 }
 
@@ -406,36 +438,70 @@ section.showcase.alt {
 
 .links {
     display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: auto;
+    padding: 0 10px 10px;
 }
 
     .links a {
         display: inline-block;
         margin: 5px 0px;
-        color: #8E7DBE;
+        color: var(--color-link);
         font-size: 14px;
         text-decoration: none;
     }
+
         .links a.disabled {
             color: #aaa;
             pointer-events: none;
-            text-decoration: line-through;
             cursor: default;
-            opacity: 0.6;
+            opacity: 0.3;
         }
 
-.disabled a {
-    color: #aaa;
-    pointer-events: none;
-    text-decoration: line-through;
-    opacity: 0.6;
-    cursor: default;
+
+.links a:hover {
+    text-decoration: underline;
+    color: var(--color-accent);
 }
-        .links a:hover {
-            text-decoration: underline;
-            color: #FF9149;
-        }
+
+/*Buttons
+    ------------------------------------
+*/
+
+.store-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-button-bg);
+    padding: 5px;
+    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    transition: background 0.2s ease;
+    cursor: pointer;
+}
+    .store-button.disabled {
+        background-color: #ddd;
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: default;
+    }
+    .store-button img {
+        height: 40px;
+        width: 40px;
+        display: block;
+    }
+
+    .store-button:hover {
+        background-color: #e0e0e0;
+    }
+
+
+/*Buttons end 
+    -----------------------------------------
+*/
 
 .modal {
     position: fixed;
@@ -475,6 +541,6 @@ section.showcase.alt {
         top: 10px;
         right: 20px;
         font-size: 32px;
-        color: #333;
+        color: var(--color-text);
         cursor: pointer;
     }
