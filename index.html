@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pavel Vesnin | 3D Artist</title>
     <link rel="icon" type="image/png" href="assets/pics/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
     <style>
         html {
@@ -12,16 +14,17 @@
         }
     </style>
 </head>
-<script src="scripts/dropdown.js" defer></script>
+
 <body>
+    <script src="scripts/dropdown.js" defer></script>
     <header>
-        <a href="index.html" class="logo">
-            <img src="assets/pics/logo.jpg" alt="Pavel Vesnin Logo">
-        </a>
+            <a href="index.html" class="logo">
+                <img src="assets/pics/favicon.svg" alt="Pavel Vesnin Logo">
+            </a>
         <nav>
-            <a href="#showcase">3D Assets Showcase</a>
+            <a href="#showcase">3D Assets</a>
             <a href="https://pavelvesnin.artstation.com/" target="_blank"> Portfolio (Artstation)</a>
-            <a href="" target="_blank"> Services</a>
+            <a href="#services"> Services</a>
 
             <div class="dropdown">
                 <button class="dropbtn">Contacts</button>
@@ -34,14 +37,17 @@
             </div>
             <a href="assets/docs/PavelVesnin_Senior3dArtist_CV.pdf" target="_blank">CV</a>
         </nav>
-    </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-left">
-                <h1>PAVEL VESNIN</h1>
-                <p class="role">3D ARTIST / TECHNICAL ARTIST</p>
-                <p class="intro">Crafted 3D Assets for Virtual Worlds</p>
+    </header>
+    <div class="container">
+        <main>
+            <section class="hero">
+                <div class="hero-left">
+                    <h1>PAVEL VESNIN</h1>
+                    <h3> 3D ARTIST | TECHNICAL ARTIST</h3>
+
+                </div>
+
                 <div class="hero-contacts">
                     <a href="https://www.linkedin.com/in/pavelvesnin3d/" target="_blank"><img src="assets/icons/linkedin-logo.svg" alt="LinkedIn" class="icon" title="LinkedIn"></a>
                     <a href="https://pavelvesnin.artstation.com/" target="_blank"><img src="assets/icons/images-square.svg" alt="LinkedIn" class="icon" title="Portfolio"></a>
@@ -49,72 +55,88 @@
                     <a href="https://t.me/pavelvesnin" target="_blank"><img src="assets/icons/telegram-logo.svg" alt="Telegram" class="icon" title="Telegram"></a>
                     <a href="https://github.com/vesninpavel" target="_blank"><img src="assets/icons/github-logo.svg" alt="GitHub" class="icon" title="GitHub"></a>
                 </div>
-            </div>
-            <div class="hero-right">
-                <div class="about-text">
-                    <h2>ABOUT ME</h2>
-                    <p> I’m a 3D artist with 15+ years in the game industry.<br></p>
-					<p>	I create optimized, game-ready props with clean topology and high-quality textures ready for use in Unity, Unreal Engine, and other pipelines.</p>
-					<p> I build custom tools to speed up modeling and engine integration — reducing routine and boosting creative focus.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="showcase" class="hidden">
 
-            <div class="showcase-wrapper">
-                <div class="showcase-description">
-                    <h2><a href="projects/tailors_workshop.html">Tailor's Workshop</a></h2>
-                    <p>This asset pack includes a collection of high-quality models themed around a tailor's workspace. Perfect for game environments and virtual sets.</p>
-                </div>
-                <div class="showcase-preview">
-                    <a href="projects/tailors_workshop.html">
-                        <img class="preview-image base" src="assets/pics/Iron_Preview.png" alt="Tailor's Workshop Preview">
-                        <img class="preview-image hover" src="assets/pics/Iron_1.png" alt="Tailor's Workshop Final Preview">
-                    </a>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="showcase" class="showcase alt hidden">
-            <div class="showcase-wrapper">
-                <div class="showcase-description">
-                    <h2><a href="projects/plugs.html">Electrical Plugs</a></h2>
-                    <p>This asset pack contains over 18 different electrical plugs, covering regions such as Europe, the US, the UK, South Africa, and USSR-era designs. Each plug model comes in optimized low-poly versions with one LOD, ensuring flexibility for real-time applications while maintaining enough detail for close-up renders. These models are fully game-ready and suitable for a variety of uses, including VR environments, virtual households, and industrial design.</p>
+            <section class="aboutme-wrapper">
+                <div class="aboutme-content">
+                    <h3>About Me</h3>
+                    <p>I'm a <span class="highlight">3D artist</span> and <span class="highlight">Technical artist</span> with 15+ years in the game industry.</p>
+                    <p>Specialized in creating optimized, game-ready props with clean topology and high-quality textures for <span class="highlight">Unity</span>, <span class="highlight">Unreal Engine</span>.</p>
+                    <p>Also experienced in building custom tools to streamline modeling and engine integration, helping reduce routine and enhance creative flow.</p>
                 </div>
-                <div class="showcase-preview">
-                    <a href="projects/plugs.html">
-                        <img class="preview-image ready" src="assets/pics/Plugs.png" alt="Electrical Plugs">
-                    </a>
-                </div>
-            </div>
-        </section>
-        <section id="showcase" class="showcase alt hidden">
-            <div class="showcase-wrapper">
-                <div class="showcase-description">
-                    <h2><a href="projects/survival_siberia.html">Survival: Siberia</a></h2>
-                    <p>A set of essential survival props designed for cold and harsh Siberian environments — from tools and supplies to rugged outdoor assets.</p>
-                </div>
-                <div class="showcase-preview">
-                    <a href="projects/survival_siberia.html">
-                        <img class="preview-image base" src="assets/pics/Iron_Preview.png" alt="Survival: Siberia Preview">
-                        <img class="preview-image hover" src="assets/pics/Iron_1.png" alt="Survival: Siberia Final Preview">
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+            </section>
 
-    <footer>
-        <div class="footer-content">
-            <p>© 2025 Pavel Vesnin — 3D Artist | Technical Artist</p>
-            <div class="footer-icons">
-                <a href="mailto:pavelvesnin@gmail.com" target="_blank"><img src="assets/icons/envelope-simple.svg" alt="Email" class="footer-icon"></a>
-                <a href="https://t.me/pavelvesnin" target="_blank"><img src="assets/icons/telegram-logo.svg" alt="Telegram" class="footer-icon"></a>
+            <section id="showcase" class="hidden">
+                <div class="showcase-wrapper">
+                    <div class="showcase-description">
+                        <h2><a href="tailors_workshop.html">Tailor's Workshop</a></h2>
+                        <p>This asset pack includes a collection of high-quality models themed around a tailor's workspace. Perfect for game environments and virtual sets.</p>
+                    </div>
+                    <div class="showcase-preview">
+                        <a href="tailors_workshop.html">
+                            <img class="preview-image base" src="assets/pics/Iron_Preview.png" alt="Tailor's Workshop Preview">
+                            <img class="preview-image hover" src="assets/pics/Iron_1.png" alt="Tailor's Workshop Final Preview">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="showcase" class="showcase alt hidden">
+                <div class="showcase-wrapper">
+                    <div class="showcase-description">
+                        <h2><a href="projects/plugs.html">Electrical Plugs</a></h2>
+                        <p>This asset pack features 18 electrical plugs from regions like Europe, the US, the UK, and USSR. Optimized low-poly models with LODs ensure game-ready quality for VR, households, and industrial design.</p>
+                    </div>
+                    <div class="showcase-preview">
+                        <a href="projects/plugs.html">
+                            <img class="preview-image ready" src="assets/pics/Plugs.png" alt="Electrical Plugs">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="showcase" class="hidden">
+                <div class="showcase-wrapper">
+                    <div class="showcase-description">
+                        <h2><a href="projects/survival_siberia.html">Survival: Siberia</a></h2>
+                        <p>A set of essential survival props designed for cold and harsh Siberian environments — from tools and supplies to rugged outdoor assets.</p>
+                    </div>
+                    <div class="showcase-preview">
+                        <a href="projects/survival_siberia.html">
+                            <img class="preview-image base" src="assets/pics/Iron_Preview.png" alt="Survival: Siberia Preview">
+                            <img class="preview-image hover" src="assets/pics/Iron_1.png" alt="Survival: Siberia Final Preview">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="services" class="services">
+                <!--<div class="service-3d">
+                <p>High‑quality, optimized props & environment assets. Clean topology and ready for real‑time engines. </p>
             </div>
-        </div>
-    </footer>
-    <script src="scripts/main.js" defer></script>
+            <div class="service-team">
+                <p>High‑quality, optimized props & environment assets. Clean topology and ready for real‑time engines. </p>
+            </div>-->
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2025 Pavel Vesnin — 3D Artist | Technical Artist</p>
+                <div class="footer-icons">
+                    <a href="mailto:pavelvesnin@gmail.com" target="_blank"><img src="assets/icons/envelope-simple.svg" alt="Email" class="footer-icon"></a>
+                    <a href="https://t.me/pavelvesnin" target="_blank"><img src="assets/icons/telegram-logo.svg" alt="Telegram" class="footer-icon"></a>
+                </div>
+            </div>
+        </footer>
+        <script src="scripts/main.js" defer></script>
 
 </body>
 </html>

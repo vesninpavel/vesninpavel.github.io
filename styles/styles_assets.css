@@ -1,0 +1,261 @@
+﻿/* Tailor's Workshop layout */
+/* Reset and Base Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    position: relative;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+.main-content {
+    padding: 0px;
+    margin-top: 0px;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: all 0.3s ease;
+    z-index: 0;
+}
+
+.description-wrapper {
+    position: relative;
+    background-color: white;
+    width: 100vw; /* На всю ширину viewport */
+    margin-left: calc(-50vw + 50%); /* Компенсация отступов родителя */
+    margin-right: calc(-50vw + 50%);
+    margin-top: -50px;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 6px var(--color-shadows);
+}
+
+.description-section {
+    position: relative;
+    justify-content: space-between;
+    max-width: 1440px;
+    width: 58%;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.description-image {
+    background-color: var( --color-bg);
+    border-radius: 20px;
+    border: 0.5px solid var(--color-card-stroke);
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16/9;
+    height: auto;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+    .description-image img {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 8px;
+        display: block;
+    }
+
+.description-text {
+    margin: 0px;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between; /* Распределяет контент между верхом и низом */
+    min-height: 330px; /* Такая же высота как у картинки */
+}
+
+.description-content {
+    flex: 1; /* Занимает доступное пространство */
+}
+    .description-text h1 {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        color: var(--color-button-bg);
+    }
+
+        .description-text p {
+            font-size: 14px;
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+.links {
+    position: relative;
+    display: flex;
+    gap: 8px;
+    margin-top: auto; /* Прижимает к низу */
+    align-self: flex-end; /* Прижимает вправо */
+    padding: 0;
+    
+}
+
+    .links a {
+        display: inline-block;
+        margin: 5px 0px;
+        color: var(--color-link);
+        font-size: 14px;
+        text-decoration: none;
+
+    }
+
+        .links a.disabled {
+            color: #aaa;
+            pointer-events: none;
+            cursor: default;
+            opacity: 0.3;
+
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+            color: var(--color-accent);
+        }
+
+.grid {
+    display: grid;
+    margin: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5px;
+    margin: 10px auto; /* Центрируем сетку */
+    justify-content: center; /* Центрируем плитки */
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.tile {
+    background-color: white;
+    width: 98%; /* Занимает всю ширину ячейки grid */
+    padding: 8px;
+    border-radius: 10px;
+    text-align: left;
+    color: var(--color-text);
+    transition: transform 0.2s ease;
+}
+
+    .tile:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .tile img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .tile h4 {
+        margin: 5px 0 5px;
+        font-size: 16px;
+    }
+
+
+
+/*Buttons
+    ------------------------------------
+*/
+
+.store-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 6px;
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    transition: background 0.2s ease;
+    cursor: pointer;
+}
+
+    .store-button.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .store-button img {
+        height: 40px;
+        width: 40px;
+        display: block;
+    }
+
+    .store-button:hover {
+        background-color: #e0e0e0;
+    }
+
+/*Buttons  end
+    -----------------------------------------
+*/
+
+.modal {
+    position: fixed;
+    inset: 0; /* равнозначно top: 0; left: 0; right: 0; bottom: 0 */
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+    transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.modal-content {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    transform: scale(0.96);
+    opacity: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+    .modal.active .modal-content {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+.modal-content img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 32px;
+    color: var(--color-text);
+    cursor: pointer;
+}
