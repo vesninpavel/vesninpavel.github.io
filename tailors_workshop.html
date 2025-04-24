@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/styles_assets.css">
+    <link rel="stylesheet" href="styles/modal.css">
     <style>
         html {
             scroll-behavior: smooth;
@@ -41,6 +42,7 @@
         </nav>
 
     </header>
+
     <div class="container">
         <div class="main-content">
             <!-- Описание набора -->
@@ -75,7 +77,7 @@
 
 
                 <div class="tile">
-                    <img src="assets/pics/Needles_Preview_02.jpg" alt="Needles" />
+                    <img src="assets/pics/Basket_1200x1200.jpg" alt="Needles" />
                     <h4>Needle Cushion Thimble Pins</h4>
                     <template class="description">
                         Game-ready PBR model
@@ -230,10 +232,33 @@
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <img id="modal-img" src="" alt="Preview">
-            <h2 id="modal-title"></h2>
-            <p id="modal-description"></p>
-            <div class="links" id="modal-links"></div>
+            <img id="modal-img" alt="Preview">
+            <div class="modal-details">
+                <h2 id="modal-title"></h2>
+                <div class="stats">
+                    <span>🔴 7712</span>
+                    <span>🔺 4531</span>
+                    <span> ■ 4257</span>
+                </div>
+                <div class="formats">
+                    <h3>Textures:</h3>
+                    <span>• Iron 4096x4096 .tga</span>
+                    <span>• Wire 2048x2048 .tga</span>
+                    <span>• Plug 2048x2048 .tga</span>
+                    <h3>Formats:</h3>
+                    <span>• Blender 4.0.2</span>
+                    <span>• Marmoset 4</span>
+                    <span>• Unity 2022.3.11f1</span>
+                    <span>• Unreal 5.4.4</span>
+                    <span>• OBJ</span>
+                    <span>• FBX</span>
+                </div>
+                <div class="links">
+                    <a href="#" title="YouTube"><img src="assets/icons/youtube.svg" alt="YouTube"></a>
+                    <a href="#" title="Fab"><img src="assets/icons/fab.svg" alt="Fab"></a>
+                    <a href="#" title="Unity"><img src="assets/icons/unity.svg" alt="Unity"></a>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -1,34 +1,43 @@
-﻿const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modal-img');
-const modalTitle = document.getElementById('modal-title');
-const modalDesc = document.getElementById('modal-description');
-const modalLinks = document.getElementById('modal-links');
+﻿document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalTitle = document.getElementById('modal-title');
+    const closeBtn = document.querySelector('.close');
 
-document.querySelectorAll('.tile').forEach(tile => {
-    tile.addEventListener('click', () => {
-        const img = tile.querySelector('img').src;
-        const title = tile.querySelector('h4').textContent;
+    // Добавляем обработчики для всех плиток
+    document.querySelectorAll('.tile').forEach(tile => {
+        tile.addEventListener('click', (e) => {
+            // Предотвращаем открытие модалки при клике на ссылки
+            if (e.target.closest('.links')) {
+                return;
+            }
 
-        // ✅ берём описание из .description блока
-        const desc = tile.querySelector('.description')?.innerHTML || 'No description yet.';
+            // Получаем данные из плитки
+            const tileImg = tile.querySelector('img');
+            const img = tileImg.src;
+            const title = tile.querySelector('h4').textContent;
 
-        const links = tile.querySelector('.links').innerHTML;
+            // Очищаем старое изображение
+            modalImg.src = '';
 
-        modalImg.src = img;
-        modalTitle.textContent = title;
-        modalDesc.innerHTML = desc;
-        modalLinks.innerHTML = links;
-
-        modal.classList.add('active');
+            // Устанавливаем новое изображение
+            setTimeout(() => {
+                modalImg.src = img;
+                modalTitle.textContent = title;
+                modal.classList.add('active');
+            }, 0);
+        });
     });
-});
 
-document.querySelector('.modal .close').addEventListener('click', () => {
-    modal.classList.remove('active');
-});
-
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
+    // Закрытие модалки при клике на крестик
+    closeBtn.addEventListener('click', () => {
         modal.classList.remove('active');
-    }
+    });
+
+    // Закрытие модалки при клике вне контента
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
 });
