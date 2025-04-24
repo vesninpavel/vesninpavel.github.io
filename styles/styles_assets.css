@@ -146,6 +146,8 @@
     text-align: left;
     color: var(--color-text);
     transition: transform 0.2s ease;
+    display: flex;  
+    flex-direction: column;
 }
 
     .tile:hover {
@@ -159,11 +161,19 @@
     }
 
     .tile h4 {
+        
         margin: 5px 0 5px;
-        font-size: 16px;
+        font-size: 14px;
+        font-weight: 500;
     }
 
-
+    /* Обновляем стили для .links внутри .tile */
+    .tile .links {
+        margin-top: auto; /* Прижимает блок к низу */
+        align-self: flex-end; /* Выравнивает по правому краю */
+        display: flex;
+        gap: 8px;
+    }   
 
 /*Buttons
     ------------------------------------
@@ -173,10 +183,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4px; /* Уменьшаем padding для большего пространства изображению */
-    border-radius: 6px;
-    width: 36px;
-    height: 36px;
+    padding: 0px; /* Уменьшаем padding для большего пространства изображению */
+    width: 24px;
+    height: 24px;
     margin: 0;
     transition: background 0.2s ease;
     cursor: pointer;
