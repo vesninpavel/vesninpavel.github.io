@@ -2,12 +2,13 @@
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modal-img');
     const modalTitle = document.getElementById('modal-title');
+    const modalLinks = modal.querySelector('.modal-details .links');
     const closeBtn = document.querySelector('.close');
 
     // Добавляем обработчики для всех плиток
     document.querySelectorAll('.tile').forEach(tile => {
         tile.addEventListener('click', (e) => {
-            // Предотвращаем открытие модалки при клике на ссылки
+            // Проверяем, не кликнули ли мы по ссылкам
             if (e.target.closest('.links')) {
                 return;
             }
@@ -17,15 +18,21 @@
             const img = tileImg.src;
             const title = tile.querySelector('h4').textContent;
 
-            // Очищаем старое изображение
-            modalImg.src = '';
+            // Очищаем ссылки в модальном окне
+            modalLinks.innerHTML = '';
 
-            // Устанавливаем новое изображение
-            setTimeout(() => {
-                modalImg.src = img;
-                modalTitle.textContent = title;
-                modal.classList.add('active');
-            }, 0);
+            // Переносим ссылки из плитки в модальное окно
+            const tileLinks = tile.querySelector('.links').cloneNode(true);
+            Array.from(tileLinks.children).forEach(link => {
+                modalLinks.appendChild(link);
+            });
+
+            // Обновляем модальное окно
+            modalImg.src = img;
+            modalTitle.textContent = title;
+
+            // Показываем модалку
+            modal.classList.add('active');
         });
     });
 

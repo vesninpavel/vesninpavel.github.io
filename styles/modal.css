@@ -1,9 +1,11 @@
-﻿*, *::before, *::after {
+﻿/*_____________Modals___________________________*/
+
+/**, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
+*/
 .modal {
     position: fixed;
     inset: 0; /* Растягиваем на весь экран */
@@ -47,13 +49,13 @@
     transform: scale(1);
 }
 
-.modal-content img {
+.modal-preview { /* вместо .modal-content img */
     width: 70%;
-    aspect-ratio: 16/9; /* Соотношение сторон 16:9 */   
-    height: auto; /* Фиксированная высота для лучшей пропорции */
-    object-fit: contain; /* Изменено с cover на contain, чтобы сохранить пропорции */
-    background-color: var(--color-bg); /* Фон для изображения */
-    border-right: 1px solid #ddd;
+    aspect-ratio: 16/9;
+    height: auto;
+    object-fit: contain;
+    background: var(--color-bg);
+    border-right: 1px solid rgba(76,79,91,.1);
 }
 
 .modal-details {
@@ -73,7 +75,7 @@
 
     .modal-details .formats h3 {
         font-size: 14px;
-        font-weight: 500;
+        font-weight: 400;
         margin: 16px 0 8px 0;
         color: var(--color-text);
     }
@@ -115,34 +117,40 @@
 
     .modal-details .links {
         display: flex;
+        align-self: flex-end;
         gap: 10px;
-        justify-content: flex-start;
+        
     }
 
         .modal-details .links a {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 36px;
-            height: 36px;
-            border-radius: 6px;
-            background-color: var(--color-bg);
+            width: 40px;
+            height: 40px;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: background-color 0.2s ease;
+            background-color: transparent;
         }
 
             .modal-details .links a img {
-                width: 24px;
-                height: 24px;
+                width: 32px;
+                height: 32px;
                 object-fit: contain;
             }
+
             .modal-details .links a:hover {
-                background-color: var(--color-accent);
+                background-color: #FFE2C0;
+                border-radius: 5px;
             }
 
 .modal-content .close {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 5px;
+    right: 15px;
     font-size: 28px;
     cursor: pointer;
     z-index: 1;
@@ -158,4 +166,3 @@
     align-items: center;
     gap: 2px;
 }
-
