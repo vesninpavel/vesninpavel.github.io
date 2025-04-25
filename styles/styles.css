@@ -153,13 +153,13 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; /* Распределяем элементы по краям */
-    align-items: center;
+    align-items: flex-start;
     max-width: 1440px; /* Максимальная ширина */
     width: 100%;
-    margin: 40px auto 60px auto; /* Центрируем по горизонтали */
+    margin: 40px auto 40px auto; /* Центрируем по горизонтали */
     min-height: 250px;
     box-sizing: border-box;
-    padding: 0px 0px; /* Отступы как в description-section */
+    padding: 40px 0px; /* Отступы как в description-section */
     z-index: 1;
     overflow: visible;
 }
@@ -207,7 +207,7 @@ main {
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     margin-bottom: 50px;
-    padding: 60px 20px;
+    padding: 30px 20px;
     box-shadow: 0 2px 6px var(--color-shadows);
 }
 
@@ -220,6 +220,23 @@ main {
     text-align: center;
     letter-spacing: 0.4px;
 }
+
+.aboutme-tools {
+    max-width: 960px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    flex-wrap: wrap;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+    .aboutme-tools img {
+        width: 36px;
+        height: 36px;
+    }
 
     .aboutme-content h3 {
         font-family: 'Roboto';
@@ -242,8 +259,8 @@ main {
 
 
 .hero-contacts .icon {
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 36px;
     transition: opacity 0.2s ease;
 }
 
