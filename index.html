@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/services.css">
+    <link rel="stylesheet" href="styles/mobile.css">
 
     <style>
         html {
@@ -23,22 +25,24 @@
             <a href="index.html" class="logo">
                 <img src="assets/icons/logo.svg" alt="Pavel Vesnin Logo">
             </a>
-        <nav>
-            <a href="#showcase">3D Assets</a>
-            <a href="https://pavelvesnin.artstation.com/" target="_blank"> Portfolio (Artstation)</a>
-            <a href="#services"> Services</a>
+            <nav>
+                <a href="#showcase">3D Assets</a>
+                <a href="https://pavelvesnin.artstation.com/" target="_blank"> Portfolio (Artstation)</a>
+                <a href="#services"> Services</a>
 
-            <div class="dropdown">
-                <button class="dropbtn">Contacts</button>
-                <div class="dropdown-content">
-                    <a href="https://www.linkedin.com/in/pavelvesnin3d/" target="_blank">LinkedIn</a>
-                    <a href="mailto:pavelvesnin@gmail.com" target="_blank">Email</a>
-                    <a href="https://t.me/pavelvesnin" target="_blank">Telegram</a>
-                    <a href="https://github.com/vesninpavel" target="_blank">GitHub</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Contacts</button>
+                    <div class="dropdown-content">
+                        <a href="https://www.linkedin.com/in/pavelvesnin3d/" target="_blank">LinkedIn</a>
+                        <a href="mailto:pavelvesnin@gmail.com" target="_blank">Email</a>
+                        <a href="https://t.me/pavelvesnin" target="_blank">Telegram</a>
+                        <a href="https://github.com/vesninpavel" target="_blank">GitHub</a>
+                    </div>
                 </div>
-            </div>
-            <a href="assets/docs/PavelVesnin_Senior3dArtist_CV.pdf" target="_blank">CV</a>
-        </nav>
+               
+                
+                <a href="assets/docs/PavelVesnin_Senior3dArtist_CV.pdf" target="_blank">CV</a>
+            </nav>
 
     </header>
     <div class="container">
@@ -53,13 +57,16 @@
                     </h3>
 
                 </div>
+                <div class="hero-right">
+                    <div class="hero-contacts">
+                        <a href="https://www.linkedin.com/in/pavelvesnin3d/" target="_blank"><img src="assets/icons/linkedin-logo.svg" alt="LinkedIn" class="icon" title="LinkedIn"></a>
+                        <a href="https://pavelvesnin.artstation.com/" target="_blank"><img src="assets/icons/images-square.svg" alt="LinkedIn" class="icon" title="Portfolio"></a>
+                        <a href="mailto:pavelvesnin@gmail.com" target="_blank"><img src="assets/icons/envelope-simple.svg" alt="Email" class="icon" title="Email"></a>
+                        <a href="https://t.me/pavelvesnin" target="_blank"><img src="assets/icons/telegram-logo.svg" alt="Telegram" class="icon" title="Telegram"></a>
+                        <a href="https://github.com/vesninpavel" target="_blank"><img src="assets/icons/github-logo.svg" alt="GitHub" class="icon" title="GitHub"></a>
 
-                <div class="hero-contacts">
-                    <a href="https://www.linkedin.com/in/pavelvesnin3d/" target="_blank"><img src="assets/icons/linkedin-logo.svg" alt="LinkedIn" class="icon" title="LinkedIn"></a>
-                    <a href="https://pavelvesnin.artstation.com/" target="_blank"><img src="assets/icons/images-square.svg" alt="LinkedIn" class="icon" title="Portfolio"></a>
-                    <a href="mailto:pavelvesnin@gmail.com" target="_blank"><img src="assets/icons/envelope-simple.svg" alt="Email" class="icon" title="Email"></a>
-                    <a href="https://t.me/pavelvesnin" target="_blank"><img src="assets/icons/telegram-logo.svg" alt="Telegram" class="icon" title="Telegram"></a>
-                    <a href="https://github.com/vesninpavel" target="_blank"><img src="assets/icons/github-logo.svg" alt="GitHub" class="icon" title="GitHub"></a>
+                    </div>
+                    <a href="#services" class="button">Services</a>
                 </div>
 
             </section>
@@ -133,13 +140,30 @@
 
 
             <section id="services" class="services">
-                <!--<div class="service-3d">
-                <p>High‑quality, optimized props & environment assets. Clean topology and ready for real‑time engines. </p>
-            </div>
-            <div class="service-team">
-                <p>High‑quality, optimized props & environment assets. Clean topology and ready for real‑time engines. </p>
-            </div>-->
+                <h1 class="services">Services</h1>
+                <div class="grid-services">
 
+                    <div class="tile-services">
+                        <h2>3D Assets</h2>
+                        <img class="tile-services img" src="assets/icons/3d_serv.svg" alt="3D Assets">
+                        <p>Higfh‑quality, optimized props & environment assets. Clean topology and ready for real‑time engines. </p>
+                        <a href="mailto:pavelvesnin@gmail.com" class="button">Hire Me!</a>
+                    </div>
+                    <div class="tile-services">
+                        <h2>3D Team Lead</h2>
+                        <img class="tile-services img" src="assets/icons/3d_team.svg" alt="3D Assets">
+                        <p>From assets to full pipelines — I assemble and lead a 3D team with quality and deadlines in mind. </p>
+                        <a href="mailto:pavelvesnin@gmail.com" class="button">Let's do it!</a>
+                    </div>
+                    <div class="tile-services">
+                        <h2>Pipeline Automation</h2>
+                        <img class="tile-services img" src="assets/icons/pipeline.svg" alt="3D Assets">
+                        <p>Automating 3D pipelines with custom Python tools — from modeling to engine-ready assets. </p>
+                        <a href="mailto:pavelvesnin@gmail.com" class="button">“Less Clicks, More Chill”</a>
+
+                    </div>
+
+                </div>
             </section>
 
 

@@ -30,6 +30,8 @@ html, body {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
     body > .main-content {
@@ -149,38 +151,48 @@ main {
 }
 
 .hero {
-    position: relative;
+    /* две колонки */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Распределяем элементы по краям */
-    align-items: flex-start;
-    max-width: 1440px; /* Максимальная ширина */
+    flex-direction: row;
+    justify-content: space-between; /* колонки по краям */
+    align-items: stretch; /* растягиваем на всю высоту */
+    max-width: 1440px;
     width: 100%;
-    margin: 40px auto 40px auto; /* Центрируем по горизонтали */
-    min-height: 250px;
-    box-sizing: border-box;
-    padding: 40px 0px; /* Отступы как в description-section */
-    z-index: 1;
-    overflow: visible;
+    margin: 40px auto;
+    padding: 40px 0;
 }
 
 .hero-left {
-    flex: 1; /* Позволяет элементу растягиваться */
-    min-width: 300px; /* Минимальная ширина */
-    padding: 0;
-    text-align: left;
+    flex: 1 1 60%; /* можно менять долю ширины */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* h1 сверху, h3 снизу */
+    min-width: 300px;
+    align-items: flex-start;
 }
 
-.hero-contacts {
-    flex: 1;
-    justify-content: flex-end;
-    align-items: flex-start; /* Выравнивание по верху */
+.hero-right { /* добавьте div.hero-right в HTML */
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+    /*gap: 20px;*/ /* между иконками и кнопкой */
+    justify-content: space-between; /* иконки ↑ , кнопка ↓ */
+    align-items: flex-end; /* прижимаем к левому краю колонки */
+
+}
+
+.hero-contacts { /* остаётся как есть, но без flex-свойств лишних */
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
-    min-width: 300px;
-    margin-top: 0; /* Убираем верхний отступ */
-    padding-top: 0; /* Убираем верхний padding */
+    margin: 0;
+    padding: 0;
+   
+}
+
+.hero-right .button {
+    margin-top: auto; /* Прижимаем кнопку к низу */
+    align-self: flex-end; /* Выравниваем кнопку по правому краю */
 }
 
 .hero-left h1 {
@@ -198,6 +210,44 @@ main {
     margin-top: 10px;
     padding-top: 0;
 }
+
+.button {
+    background-color: var(--color-button-bg);
+    color: white;
+    display: inline-block; /* Позволяет кнопке подстраиваться под контент */
+    padding: 8px 32px; /* Увеличенные отступы */
+    border-radius: 100px; /* Сильно закругленные края */
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px; /* Увеличенный размер шрифта */
+    font-weight: 400;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap; /* Текст в одну строку */
+    box-shadow: 2px 2px 4px var(--color-shadows); /* Мягкая тень */
+    margin-top: auto
+}
+
+    .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px var(--color-shadows);
+        background-color: #f06647; /* Немного светлее при наведении */
+    }
+
+
+.hero-contacts .icon {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.2s ease;
+}
+
+    .hero-contacts .icon:hover {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+
 
 
 .aboutme-wrapper {
@@ -218,7 +268,6 @@ main {
     font-weight: 400;
     font-size: 16px;
     text-align: center;
-    letter-spacing: 0.4px;
 }
 
 .aboutme-tools {
@@ -247,7 +296,7 @@ main {
     }
 
     .aboutme-content p {
-        margin-bottom: 16px;
+        margin-bottom: 12px;
     }
 
 .highlight {
@@ -258,16 +307,7 @@ main {
 }
 
 
-.hero-contacts .icon {
-    width: 36px;
-    height: 36px;
-    transition: opacity 0.2s ease;
-}
 
-    .hero-contacts .icon:hover {
-        opacity: 0.5;
-        transform: scale(1.2);
-    }
 
 
 #showcase {
@@ -399,3 +439,4 @@ section.showcase.alt {
 #showcase.visible {
     transition-delay: 0.4s;
 }
+

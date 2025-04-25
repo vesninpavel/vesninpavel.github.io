@@ -1,0 +1,28 @@
+﻿@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Располагаем элементы вертикально */
+        align-items: center; /* Центрируем элементы */
+    }
+
+    .hero-left, .hero-right {
+        width: 100%; /* Элементы занимают всю ширину */
+        text-align: center; /* Центрируем текст */
+        align-items: center;
+    }
+
+    .hero-right {
+        margin-top: 20px; /* Добавляем отступ сверху для кнопок и иконок */
+    }
+
+    .button {
+        width: auto; /* Кнопка подстраивается под текст */
+        margin: 0px auto; /* Центрируем кнопку */
+    }
+
+    .hero-contacts {
+        justify-content: center; /* Центрируем иконки */
+        align-items: center;
+        gap: 16px; /* Уменьшаем расстояние между иконками */
+        margin: 10px; 
+    }
+}
