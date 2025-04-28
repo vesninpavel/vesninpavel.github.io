@@ -110,7 +110,7 @@
     .modal-details h2 {
         font-size: 16px;
         font-weight: 500;
-        margin-bottom: 10px;
+        margin-bottom: 6px;
         color: var(--color-text);
     }
 
@@ -135,7 +135,8 @@
     .modal-details .stats {
         display: flex;
         gap: 10px;
-        margin-bottom: 20px;
+        margin-top: 6px;
+        margin-bottom: 12px;
     }
 
         .modal-details .stats span {
@@ -147,7 +148,7 @@
         }
 
     .modal-details .formats {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
         .modal-details .formats span {
