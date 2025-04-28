@@ -14,14 +14,15 @@
       "faces": 434
     },
     "textures": [
-      "Iron 4096×4096 .tga",
-      "Wire 2048×2048 .tga",
-      "Plug 2048×2048 .tga"
+      "LOD0 2048x2048 .png",
+      "LOD1 1024x1024 .png"
+      
     ],
     "formats": [
       "Blender 4.0.2",
       "Marmoset 4",
       "Unity 2022.3.11f1",
+      "Unreal 4.27",
       "Unreal 5.4.4",
       "OBJ",
       "FBX"
@@ -41,8 +42,19 @@
       "tris": 1586,
       "faces": 969
     },
-    "textures": [],
-    "formats": []
+    "textures": [
+      "LOD0 2048x2048 .png",
+      "LOD1 1024x1024 .png"
+    ],
+    "formats": [
+      "Blender 4.0.2",
+      "Marmoset 4",
+      "Unity 2022.3.11f1",
+      "Unreal 4.27",
+      "Unreal 5.4.4",
+      "OBJ",
+      "FBX"
+    ]
   },
 
   "plug03": {
@@ -60,7 +72,15 @@
       "faces": 969
     },
     "textures": [],
-    "formats": []
+    "formats": [
+      "Blender 4.0.2",
+      "Marmoset 4",
+      "Unity 2022.3.11f1",
+      "Unreal 4.27",
+      "Unreal 5.4.4",
+      "OBJ",
+      "FBX"
+    ]
   },
   
   "plug04": {
