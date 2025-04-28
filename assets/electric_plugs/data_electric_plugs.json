@@ -1,0 +1,47 @@
+{
+  "plug01": {
+    "title": "Round Electrical plug USSR",
+    "img": "assets/electric_plugs/Plug01.jpg",
+    "store": {
+      "fab": "https://www.cgtrader.com/3d-models/electronics/other/round-electrical-plug-ussr",
+      "cgtrader": "https://www.cgtrader.com/3d-models/electronics/other/round-electrical-plug-ussr",
+      "unity": "https://assetstore.unity.com/packages/3d/props/electronics/round-electrical-plug-ussr-294099"
+    },
+    "youtube": "https://youtu.be/bPIQ4UgbnUs",
+    "stats": {
+      "verts": 417,
+      "tris": 748,
+      "faces": 434
+    },
+    "textures": [
+      "Iron 4096×4096 .tga",
+      "Wire 2048×2048 .tga",
+      "Plug 2048×2048 .tga"
+    ],
+    "formats": [
+      "Blender 4.0.2",
+      "Marmoset 4",
+      "Unity 2022.3.11f1",
+      "Unreal 5.4.4",
+      "OBJ",
+      "FBX"
+    ]
+  },
+  "plug02": {
+    "title": "Electrical plug USSR",
+    "img": "assets/electric_plugs/Plug02.jpg",
+    "store": {
+      "fab": null,
+      "cgtrader": "https://www.cgtrader.com/3d-models/electronics/other/electrical-plug-ussr",
+      "unity": "https://assetstore.unity.com/packages/3d/props/electronics/electrical-plug-ussr-294127"
+    },
+    "youtube": "https://youtu.be/9MpNkiMPbzE",
+    "stats": {
+      "verts": 8120,
+      "tris": 4901,
+      "faces": 4600
+    },
+    "textures": [],
+    "formats": []
+  }
+}

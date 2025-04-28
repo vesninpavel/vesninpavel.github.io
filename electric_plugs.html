@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailor's Workshop'</title>
+    <title>Electrical Plugs</title>
     <link rel="icon" type="image/svg" href="assets/icons/Favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -16,6 +16,7 @@
             scroll-behavior: smooth;
         }
     </style>
+
 </head>
 
 <body>
@@ -89,7 +90,7 @@
             <div class="grid">
 
                 <!-- Plug01 -->
-                <div class="tile">
+                <div class="tile" data-key="plug01">
                     <div class="image-wrapper">
                         <img src="assets/electric_plugs/Plug01.jpg" alt="Plug01" />
                     </div>
@@ -109,14 +110,14 @@
                 </div>
                 <!-- /Plug01 -->
                 <!-- Plug02 -->
-                <div class="tile">
+                <div class="tile" data-key="plug02">
                     <div class="image-wrapper">
                         <img src="assets/electric_plugs/Plug02.jpg" alt="Plug02" />
                     </div>
                     <h4>Electrical plug USSR</h4>
 
                     <div class="links">
-                        <a href="#" class="store-button disabled" title="Fab" target="_blank">
+                        <a href="#" class="store-button" title="Fab" target="_blank">
                             <img src="assets/icons/Fab.png" alt="Fab" />
                         </a>
                         <a href="https://www.cgtrader.com/3d-models/electronics/other/electrical-plug-ussr" class="store-button" title="CGTrader" target="_blank">
@@ -136,7 +137,7 @@
                     <h4>Electrical plug Type B</h4>
 
                     <div class="links">
-                        <a href="#" class="store-button disabled" title="Fab" target="_blank">
+                        <a href="#" class="store-button" title="Fab" target="_blank">
                             <img src="assets/icons/Fab.png" alt="Fab" />
                         </a>
                         <a href="https://www.cgtrader.com/3d-models/electronics/other/electrical-plug-type-b" class="store-button" title="CGTrader" target="_blank">
@@ -158,55 +159,120 @@
         </div>
     </div>
 
-    <!-- Модалка -->
-    <div id="modal" class="modal">
+    <!-- Modal New -->
+
+    <div id="modal" class="modal" role="dialog" aria-labelledby="modal-title">
         <div class="modal-content">
-            <span class="close" aria-label="Close modal">&times;</span>
-            <img id="modal-img" class="modal-preview" alt="Preview">
+            <span class="close" aria-label="Close">&times;</span>
+            <div class="modal-preview-container">
+                <img id="modal-img" class="modal-preview" alt="Preview" />
+                <a id="modal-youtube" class="youtube-button" target="_blank">
+                    <img src="assets/icons/youtube.svg" alt="YouTube" title="Turntable 360">
+                </a>
+            </div>
             <div class="modal-details">
                 <h2 id="modal-title"></h2>
-                <div class="formats">
-                    <h3> Game-ready PBR model</h3>
-                </div>
+
                 <div class="stats">
                     <span>
                         <svg class="stat-icon" width="12" height="12" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="7" fill="#E65F41" />
                         </svg>
-                        7712
+                        <span id="modal-verts">—</span>
                     </span>
                     <span>
                         <svg class="stat-icon" width="16" height="16" viewBox="0 0 16 16">
                             <path d="M8 2L14 14H2L8 2Z" fill="#E65F41" />
                         </svg>
-                        4531
+                        <span id="modal-tris">—</span>
                     </span>
                     <span>
                         <svg class="stat-icon" width="16" height="16" viewBox="0 0 16 16">
                             <rect x="2" y="2" width="12" height="12" fill="#E65F41" />
                         </svg>
-                        4257
+                        <span id="modal-faces">—</span>
                     </span>
                 </div>
+
                 <div class="formats">
                     <h3>Textures:</h3>
-                    <span>• Iron 4096x4096 .tga</span>
-                    <span>• Wire 2048x2048 .tga</span>
-                    <span>• Plug 2048x2048 .tga</span>
-                    <h3>Formats:</h3>
-                    <span>• Blender 4.0.2</span>
-                    <span>• Marmoset 4</span>
-                    <span>• Unity 2022.3.11f1</span>
-                    <span>• Unreal 5.4.4</span>
-                    <span>• OBJ</span>
-                    <span>• FBX</span>
+                    <ul id="modal-textures"></ul>
                 </div>
-                <div class="links">
-                    <!-- Ссылки будут добавляться динамически через JavaScript -->
+                <div class="formats">
+                    <h3>Formats:</h3>
+                    <ul id="modal-formats"></ul>
+                </div>
+
+                <div class="links" id="modal-links">
+                    <a id="link-fab" class="store-button disabled" title="Fab" target="_blank">
+                        <img src="assets/icons/Fab.png" alt="Fab">
+                    </a>
+                    <a id="link-cgtrader" class="store-button disabled" title="CGTrader" target="_blank">
+                        <img src="assets/icons/CgTrader.png" alt="CGTrader">
+                    </a>
+                    <a id="link-unity" class="store-button disabled" title="Unity" target="_blank">
+                        <img src="assets/icons/unity.svg" alt="Unity Store">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Модалка -->
+    <!--<div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" aria-label="Close modal">&times;</span>
+            <div class="modal-preview-container">
+                <img id="modal-img" class="modal-preview" alt="Preview">
+                <a href="https://youtu.be/9jVsihtToFk?si=Ka1JL0iaWIJxEAFh" class="youtube-button" target="_blank">
+                    <img src="assets/icons/youtube.svg" alt="Watch on YouTube" title="Turntable 360">
+                </a>
+            </div>
+                <div class="modal-details">
+                    <h2 id="modal-title"></h2>
+                    <div class="formats">
+                        <h3> Game-ready PBR model</h3>
+                    </div>
+                    <div class="stats">
+                        <span>
+                            <svg class="stat-icon" width="12" height="12" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="7" fill="#E65F41" />
+                            </svg>
+                            7712
+                        </span>
+                        <span>
+                            <svg class="stat-icon" width="16" height="16" viewBox="0 0 16 16">
+                                <path d="M8 2L14 14H2L8 2Z" fill="#E65F41" />
+                            </svg>
+                            4531
+                        </span>
+                        <span>
+                            <svg class="stat-icon" width="16" height="16" viewBox="0 0 16 16">
+                                <rect x="2" y="2" width="12" height="12" fill="#E65F41" />
+                            </svg>
+                            4257
+                        </span>
+                    </div>
+                    <div class="formats">
+                        <h3>Textures:</h3>
+                        <span>• Iron 4096x4096 .tga</span>
+                        <span>• Wire 2048x2048 .tga</span>
+                        <span>• Plug 2048x2048 .tga</span>
+                        <h3>Formats:</h3>
+                        <span>• Blender 4.0.2</span>
+                        <span>• Marmoset 4</span>
+                        <span>• Unity 2022.3.11f1</span>
+                        <span>• Unreal 5.4.4</span>
+                        <span>• OBJ</span>
+                        <span>• FBX</span>
+                    </div>
+                    <div class="links">-->
+    <!-- Ссылки будут добавляться динамически через JavaScript -->
+    <!--</div>
+
+            </div>
+        </div>
+    </div>-->
 
     <footer>
         <div class="footer-content">
