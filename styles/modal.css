@@ -1,11 +1,5 @@
 ﻿/*_____________Modals___________________________*/
 
-/**, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-*/
 .modal {
     position: fixed;
     inset: 0; /* Растягиваем на весь экран */
@@ -29,7 +23,17 @@
         pointer-events: auto;
     }
 
+.modal-description {
+    font-size: 1rem; /* базовый размер шрифта */
+    color: darkred; /* тёмно-серый для лучшей читаемости */
+    line-height: 1.6; /* комфортный межстрочный интервал */
+    margin-bottom: 1.5em; /* отступ до следующего блока */
+}
 
+    /* абзацы внутри */
+    .modal-description p {
+        margin: 0 0 0.8em; /* нижний отступ между параграфами */
+    }
 
 .modal-content {
     background: white;
@@ -50,6 +54,7 @@
     opacity: 1;
     transform: scale(1);
 }
+
 .modal-preview-container {
     position: relative;
     width: 70%;
@@ -111,7 +116,7 @@
 
     .modal-details .formats h3 {
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 500;
         margin: 16px 0 8px 0;
         color: var(--color-text);
     }
@@ -155,9 +160,8 @@
         display: flex;
         align-self: flex-end;
         gap: 10px;
-        
     }
-  
+
 
         .modal-details .links a {
             display: flex;
@@ -166,9 +170,6 @@
             width: 40px;
             height: 40px;
             border: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             transition: background-color 0.2s ease;
             background-color: transparent;
         }
@@ -203,3 +204,45 @@
     align-items: center;
     gap: 2px;
 }
+
+#modal-textures,
+#modal-formats {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px; /* расстояние между пунктами */
+}
+
+    #modal-textures li,
+    #modal-formats li {
+        position: relative;
+        padding-left: 1em; /* место под буллет */
+        font-size: 14px;
+        color: var(--color-text);
+        margin-bottom: 0.5em;
+    }
+
+        /* Цветной оранжевый буллет перед каждым пунктом */
+        #modal-textures li::before,
+        #modal-formats li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #E65F41;
+            font-weight: bold;
+        }
+
+#modal-formats {
+    display: flex; /* оставляем флекс, но… */
+    flex-direction: column; /* …ставим направление «вниз» */
+    flex-wrap: nowrap; /* убираем переносы */
+    gap: 0.5rem; /* расстояние между строками */
+}
+
+    /* сам список <li> остаётся с нашими буллетами */
+    #modal-formats li {
+        margin-bottom: 0; /* если был отступ снизу, можно убрать */
+    }

@@ -43,5 +43,41 @@
     },
     "textures": [],
     "formats": []
+  },
+
+  "plug03": {
+    "title": "Electrical plug USSR",
+    "img": "assets/electric_plugs/Plug02.jpg",
+    "store": {
+      "fab": null,
+      "cgtrader": "https://www.cgtrader.com/3d-models/electronics/other/electrical-plug-ussr",
+      "unity": "https://assetstore.unity.com/packages/3d/props/electronics/electrical-plug-ussr-294127"
+    },
+    "youtube": "https://youtu.be/9MpNkiMPbzE",
+    "stats": {
+      "verts": 910,
+      "tris": 1586,
+      "faces": 969
+    },
+    "textures": [],
+    "formats": []
+  },
+  
+  "plug04": {
+    "title": "Electrical plug USSR",
+    "img": "assets/electric_plugs/Plug02.jpg",
+    "store": {
+      "fab": null,
+      "cgtrader": "https://www.cgtrader.com/3d-models/electronics/other/electrical-plug-ussr",
+      "unity": "https://assetstore.unity.com/packages/3d/props/electronics/electrical-plug-ussr-294127"
+    },
+    "youtube": "https://youtu.be/9MpNkiMPbzE",
+    "stats": {
+      "verts": 910,
+      "tris": 1586,
+      "faces": 969
+    },
+    "textures": [],
+    "formats": []
   }
 }
