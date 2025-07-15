@@ -128,6 +128,11 @@ nav {
             background-color: #FFE2C0;
             color: var(--color-link-hover);
         }
+        
+.dropdown-right .dropdown-content {
+    left: auto;
+    right: 0;
+}
 
 .dropdown.open .dropdown-content {
     display: block;
