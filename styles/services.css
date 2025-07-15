@@ -1,6 +1,7 @@
 ﻿.services {
     margin: 65px auto;
     max-width: 1440px;
+    
 }
     .services h1 {
         font-family: 'Roboto';
@@ -12,10 +13,11 @@
     }
 .grid-services {
     display: grid;
-    grid-template-columns: repeat(3, 280px); /* Фиксированная ширина для 3 колонок */
-    gap: 180px; /* Увеличиваем отступ между плитками */
-    justify-content: center; /* Центрируем всю сетку */
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, 280px);
+    gap: 20px; /* Увеличиваем отступ между плитками */
+    width: 95%;
+    justify-content: space-between;
+    margin: 0 auto; 
 }
 
 .tile-services {
@@ -29,6 +31,8 @@
     align-items: center; /* всё содержимое по центру по-горизонтали */
     text-align: center;
     width: 280px;
+    max-width: 280px;
+    margin: 0 auto;
     height: auto;
 }
 
@@ -60,3 +64,10 @@
         margin: 16px auto;
         display: block;
     }
+
+    /* Адаптация для планшетов и мобильных */
+@media (max-width: 640px) {
+    .grid-services {
+        justify-content: center;
+    }
+}
