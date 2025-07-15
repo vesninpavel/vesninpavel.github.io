@@ -87,6 +87,7 @@ nav {
 .dropdown {
     color: var(--color-text);
     position: relative; /* Для позиционирования выпадающего меню */
+    display: inline-block;
 }
 
 .dropbtn {
@@ -107,7 +108,7 @@ nav {
     }
 
 .dropdown-content {
-    display: none;
+    display: none; /* Скрываем выпадающее меню по умолчанию */
     position: absolute;
     background-color: var(--color-bg);
     min-width: 160px;
@@ -129,6 +130,11 @@ nav {
         }
 
 .dropdown.open .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
     display: block;
 }
 
