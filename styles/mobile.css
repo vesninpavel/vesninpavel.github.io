@@ -1,28 +1,83 @@
-﻿@media (max-width: 768px) {
+﻿/* Hero section responsive styles */
+@media (max-width: 768px) {
     .hero {
-        flex-direction: column; /* Располагаем элементы вертикально */
-        align-items: center; /* Центрируем элементы */
+        flex-direction: column;
+        align-items: center;
     }
 
     .hero-left, .hero-right {
-        width: 100%; /* Элементы занимают всю ширину */
-        text-align: center; /* Центрируем текст */
+        width: 100%;
+        text-align: center;
         align-items: center;
     }
 
     .hero-right {
-        margin-top: 20px; /* Добавляем отступ сверху для кнопок и иконок */
+        margin-top: 20px;
     }
 
     .button {
-        width: auto; /* Кнопка подстраивается под текст */
-        margin: 0px auto; /* Центрируем кнопку */
+        width: auto;
+        margin: 0px auto;
     }
 
     .hero-contacts {
-        justify-content: center; /* Центрируем иконки */
+        justify-content: center;
         align-items: center;
-        gap: 16px; /* Уменьшаем расстояние между иконками */
+        gap: 16px;
         margin: 10px; 
+    }
+}
+
+/* Hamburger menu styles */
+@media (max-width: 560px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 10;
+    }
+
+    .hamburger span {
+        width: 100%;
+        height: 3px;
+        background-color: var(--color-text);
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav.nav-menu {
+        display: none;
+        position: fixed;
+        top: 60px;
+        right: 0; /* Меняем с left: 0 на right: 0 */
+        width: 280px; /* Фиксированная ширина меню */
+        background: white;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start; /* Выравнивание по левому краю */
+        gap: 20px;
+        box-shadow: -2px 2px 5px rgba(0,0,0,0.1);
+        height: calc(100vh - 60px); /* Высота на весь экран минус шапка */
+        overflow-y: auto; /* Добавляем скролл если нужно */
+    }
+
+    nav.nav-menu.active {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        margin-top: 10px;
+    }
+
+    .dropdown {
+        width: 100%;
+        text-align: center;
     }
 }
