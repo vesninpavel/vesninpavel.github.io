@@ -23,8 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking direct links (not dropdowns)
-        navMenu.querySelectorAll('a:not(.dropbtn):not(.dropdown-content a)').forEach(link => {
+        // Close menu when clicking main navigation links
+        const mainLinks = navMenu.querySelectorAll('a[href="#showcase"], a[href^="https://pavelvesnin.artstation.com"], a[href="#services"]');
+        mainLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
             });
