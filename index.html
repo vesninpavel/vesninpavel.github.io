@@ -15,37 +15,39 @@
 <body>
     <script src="scripts/dropdown.js" defer></script>
     <header class="site-header">
-        <a href="index.html" class="logo">
-            <img src="assets/icons/logo.svg" alt="Pavel Vesnin Logo">
-        </a>
-        <button class="hamburger" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <nav class="nav-menu">
-            <a href="#showcase">Work</a>
-            <a href="https://pavelvesnin.artstation.com/" target="_blank">Portfolio</a>
-            <a href="#services">Services</a>
+        <div class="site-header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/icons/logo.svg" alt="Pavel Vesnin Logo">
+            </a>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu">
+                <a href="#showcase">Work</a>
+                <a href="https://pavelvesnin.artstation.com/" target="_blank">Portfolio</a>
+                <a href="#services">Services</a>
 
-            <div class="dropdown">
-                <button class="dropbtn">Contacts</button>
-                <div class="dropdown-content">
-                    <a href="https://www.linkedin.com/in/pavelvesnin3d/" target="_blank">LinkedIn</a>
-                    <a href="mailto:pavelvesnin@gmail.com" target="_blank">Email</a>
-                    <a href="https://t.me/pavelvesnin" target="_blank">Telegram</a>
-                    <a href="https://github.com/vesninpavel" target="_blank">GitHub</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Contacts</button>
+                    <div class="dropdown-content">
+                        <a href="https://www.linkedin.com/in/pavelvesnin3d/" target="_blank">LinkedIn</a>
+                        <a href="mailto:pavelvesnin@gmail.com" target="_blank">Email</a>
+                        <a href="https://t.me/pavelvesnin" target="_blank">Telegram</a>
+                        <a href="https://github.com/vesninpavel" target="_blank">GitHub</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="dropdown dropdown-right">
-                <button class="dropbtn">CV</button>
-                <div class="dropdown-content">
-                    <a href="assets/docs/PavelVesnin_3dArtist_CV.pdf" target="_blank">3D Artist (ENG)</a>
-                    <a href="assets/docs/PavelVesnin_3dArtist_CV_Rus.pdf" target="_blank">3D Artist (RUS)</a>
+                <div class="dropdown dropdown-right">
+                    <button class="dropbtn">CV</button>
+                    <div class="dropdown-content">
+                        <a href="assets/docs/PavelVesnin_3dArtist_CV.pdf" target="_blank">3D Artist (ENG)</a>
+                        <a href="assets/docs/PavelVesnin_3dArtist_CV_Rus.pdf" target="_blank">3D Artist (RUS)</a>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <main class="page">
@@ -76,110 +78,42 @@
                         <strong>15+ Years</strong>
                     </div>
                     <div class="highlight-card">
-                        <span>Focus</span>
-                        <strong>Game-ready Assets</strong>
-                    </div>
-                    <div class="highlight-card">
-                        <span>Tooling</span>
-                        <strong>Python Automation</strong>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="about section hidden">
-            <div class="section-head">
-                <h2>About</h2>
-                <p>3D artist and technical artist with 15+ years in the game industry.</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>
-                        Specialized in optimized props with clean topology and high-quality
-                        textures for Unity and Unreal Engine. I also build custom tools to
-                        streamline modeling and engine integration.
-                    </p>
-                    <p>
-                        The goal is always the same: reliable assets, smooth pipelines, and
-                        fast, creative iteration.
-                    </p>
-                </div>
-                <div class="about-tools">
-                    <div class="tool-chip">
-                        <img src="assets/icons/blender.svg" alt="Blender">
-                        <span>Blender</span>
-                    </div>
-                    <div class="tool-chip">
-                        <img src="assets/icons/zbrush.svg" alt="ZBrush">
-                        <span>ZBrush</span>
-                    </div>
-                    <div class="tool-chip">
-                        <img src="assets/icons/3dsmax.svg" alt="3ds Max">
-                        <span>3ds Max</span>
-                    </div>
-                    <div class="tool-chip">
-                        <img src="assets/icons/maya.svg" alt="Maya">
-                        <span>Maya</span>
-                    </div>
-                    <div class="tool-chip">
-                        <img src="assets/icons/rizom.svg" alt="RizomUV">
-                        <span>RizomUV</span>
-                    </div>
-                    <div class="tool-chip">
-                        <img src="assets/icons/marmoset.svg" alt="Marmoset Toolbag">
-                        <span>Marmoset</span>
-                    </div>
-                    <div class="tool-chip">
-                        <img src="assets/icons/ue.svg" alt="Unreal Engine">
-                        <span>Unreal Engine</span>
-                    </div>
-                    <div class="tool-chip">
-                        <img src="assets/icons/unity.svg" alt="Unity">
-                        <span>Unity</span>
-                    </div>
-                    <div class="tool-chip">
-                        <img src="assets/icons/sp.svg" alt="Substance Painter">
-                        <span>Substance Painter</span>
-                    </div>
-                    <div class="tool-chip">
-                        <img src="assets/icons/sd.svg" alt="Substance Designer">
-                        <span>Substance Designer</span>
-                    </div>
-                    <div class="tool-chip">
-                        <img src="assets/icons/ps.svg" alt="Adobe Photoshop">
-                        <span>Photoshop</span>
-                    </div>
-                    <div class="tool-chip">
-                        <img src="assets/icons/python.svg" alt="Python">
-                        <span>Python</span>
+                        <span>About</span>
+                        <strong>3D artist and technical artist with 15+ years in the game industry.</strong>
+                        <p>
+                            Specialized in optimized props with clean topology and high-quality
+                            textures for Unity and Unreal Engine. I also build custom tools to
+                            streamline modeling and engine integration.
+                        </p>
+                        <p>
+                            The goal is always the same: reliable assets, smooth pipelines, and
+                            fast, creative iteration.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="showcase" class="section showcase hidden">
-            <div class="section-head">
-                <h2>Selected Work</h2>
-                <p>Two recent asset packs with a clear, production-ready focus.</p>
-            </div>
-            <div class="showcase-grid">
-                <article class="project-card">
-                    <a href="tailors_workshop.html" class="project-media">
-                        <img src="assets/pics/Iron_Preview.png" alt="Tailor's Workshop Preview">
-                    </a>
-                    <div class="project-meta">
+            <div class="showcase-stack">
+                <article class="showcase-item">
+                    <div class="showcase-text">
                         <h3><a href="tailors_workshop.html">Tailor's Workshop</a></h3>
-                        <p>High-quality models themed around a tailor's workspace for rich game environments.</p>
+                        <p>This asset pack includes a collection of high-quality models themed around a tailor's workspace. Perfect for game environments and virtual sets.</p>
                     </div>
+                    <a href="tailors_workshop.html" class="showcase-media preview-swap">
+                        <img src="assets/pics/Iron_Preview.png" alt="Tailor's Workshop Preview" class="preview-base">
+                        <img src="assets/pics/Iron_1.png" alt="" class="preview-hover" aria-hidden="true">
+                    </a>
                 </article>
 
-                <article class="project-card">
-                    <a href="electric_plugs.html" class="project-media">
+                <article class="showcase-item reverse">
+                    <a href="electric_plugs.html" class="showcase-media">
                         <img src="assets/electric_plugs/Plugs_Cover.png" alt="Electrical Plugs">
                     </a>
-                    <div class="project-meta">
+                    <div class="showcase-text">
                         <h3><a href="electric_plugs.html">Electrical Plugs</a></h3>
-                        <p>18 optimized plugs from EU, US, UK, and USSR regions with LODs.</p>
+                        <p>This asset pack features 18 electrical plugs from regions like Europe, the US, the UK, and USSR. Optimized low-poly models with LODs ensure game-ready quality for VR, households, and industrial design.</p>
                     </div>
                 </article>
             </div>

@@ -1,7 +1,7 @@
 ﻿
 .container {
     position: relative;
-    max-width: 1440px;
+    max-width: 1656px;
     width: 100%;
     margin: 0 auto;
 }
@@ -17,7 +17,7 @@
 
 .description-wrapper {
     position: relative;
-    background-color: white;
+    background-color: rgb(247, 247, 247);
     width: 100vw; /* На всю ширину viewport */
     margin-left: calc(-50vw + 50%); /* Компенсация отступов родителя */
     margin-right: calc(-50vw + 50%);
@@ -29,7 +29,7 @@
 .description-section {
     position: relative;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1380px;
     align-content: center;
     width: 100%;
     margin: 0 auto;
@@ -52,6 +52,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-color: var(--color-card-alt);
 }
 
     .description-image img {
@@ -60,6 +61,7 @@
         object-fit: contain;
         border-radius: 8px;
         display: block;
+        background-color: var(--color-card-alt);
     }
 
 .description-text {
@@ -121,13 +123,13 @@
     gap: 5px;
     margin: 10px auto; /* Центрируем сетку */
     justify-content: center; /* Центрируем плитки */
-    max-width: 1440px;
+    max-width: 1656px;
     width: 100%;
     padding: 0 0px;
 }
 
 .tile {
-    background-color: white;
+    background-color: rgb(247, 247, 247);
     width: 98%; /* Занимает всю ширину ячейки grid */
 
     padding: 8px;
@@ -143,7 +145,7 @@
     .tile .image-wrapper {
         width: 100%;
         aspect-ratio: 16 / 9; /* Устанавливаем соотношение сторон */
-        background-color: var(--color-bg); /* Фон на случай отсутствия изображения */
+        background-color: var(--color-card-alt); /* Фон на случай отсутствия изображения */
         border-radius: 8px;
         overflow: hidden;
         display: flex;

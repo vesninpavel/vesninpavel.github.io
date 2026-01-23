@@ -1,6 +1,9 @@
 @media (max-width: 960px) {
     .site-header {
         border-radius: 18px;
+    }
+
+    .site-header-inner {
         padding: 10px 16px;
     }
 
