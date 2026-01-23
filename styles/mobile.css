@@ -1,83 +1,70 @@
-﻿/* Hero section responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
+    .site-header {
+        border-radius: 18px;
+        padding: 10px 16px;
+    }
+
     .hero {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-left, .hero-right {
-        width: 100%;
-        text-align: center;
-        align-items: center;
-    }
-
-    .hero-right {
-        margin-top: 20px;
-    }
-
-    .button {
-        width: auto;
-        margin: 0px auto;
-    }
-
-    .hero-contacts {
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-        margin: 10px; 
+        gap: 32px;
     }
 }
 
-/* Hamburger menu styles */
-@media (max-width: 560px) {
+@media (max-width: 768px) {
+    body {
+        padding: 0 14px 60px;
+    }
+
+    .page {
+        padding-top: 16px;
+    }
+
+    .site-header {
+        position: sticky;
+        top: 10px;
+    }
+
     .hamburger {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 21px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        z-index: 10;
     }
 
-    .hamburger span {
-        width: 100%;
-        height: 3px;
-        background-color: var(--color-text);
-        transition: all 0.3s ease-in-out;
-    }
-
-    nav.nav-menu {
+    .nav-menu {
         display: none;
         position: fixed;
-        top: 60px;
-        right: 0; /* Меняем с left: 0 на right: 0 */
-        width: 280px; /* Фиксированная ширина меню */
-        background: white;
-        padding: 20px;
+        top: 70px;
+        right: 12px;
+        width: 260px;
+        background: var(--color-card);
+        padding: 18px;
         flex-direction: column;
-        align-items: flex-start; /* Выравнивание по левому краю */
-        gap: 20px;
-        box-shadow: -2px 2px 5px rgba(0,0,0,0.1);
-        height: calc(100vh - 60px); /* Высота на весь экран минус шапка */
-        overflow-y: auto; /* Добавляем скролл если нужно */
+        align-items: flex-start;
+        gap: 16px;
+        border-radius: 18px;
+        box-shadow: 0 16px 30px rgba(31, 28, 26, 0.16);
+        height: calc(100vh - 100px);
+        overflow-y: auto;
     }
 
-    nav.nav-menu.active {
+    .nav-menu.active {
         display: flex;
     }
 
     .dropdown-content {
         position: static;
         box-shadow: none;
-        margin-top: 10px;
+        margin-top: 8px;
+        padding: 6px 0 0;
     }
 
-    .dropdown {
-        width: 100%;
+    .section {
+        margin: 64px 0;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .site-footer {
+        flex-direction: column;
         text-align: center;
     }
 }
