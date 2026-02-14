@@ -21,6 +21,7 @@
     --color-card-stroke: rgba(255, 255, 255, 0.08);
     --color-ink: #0a0a0b;
     --color-glow: rgba(255, 118, 79, 0.35);
+    --mesh-4: #0b0c10;
 }
 
 html {
@@ -32,24 +33,29 @@ body {
     font-size: 18px;
     color: var(--color-text);
     background: var(--color-bg);
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
-    padding: 0 16px 80px;
+    padding: 0 16px 24px;
 }
 
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background:
-        radial-gradient(900px 500px at 12% 0%, rgba(255, 77, 46, 0.22), transparent 60%),
-        radial-gradient(800px 520px at 88% 8%, rgba(84, 114, 255, 0.18), transparent 60%),
-        radial-gradient(700px 420px at 60% 85%, rgba(255, 255, 255, 0.06), transparent 65%),
-        linear-gradient(180deg, #0b0c10 0%, #0f131a 50%, #0b0c10 100%);
+    background-color: #080a0d;
+   
+    background-size: 160% 160%, 170% 170%, 180% 180%, 100% 100%;
+    background-position: 0% 0%, 100% 0%, 50% 100%, 0 0;
+    background-blend-mode: screen, screen, screen, normal;
+    filter: blur(0.6px) saturate(94%);
     z-index: -1;
 }
 
 .page {
+    flex: 1;
+    width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     padding-top: 24px;
@@ -128,7 +134,7 @@ body::before {
 .logo img {
     height: 48px;
     width: auto;
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .nav-menu {
@@ -142,12 +148,19 @@ body::before {
 .dropbtn {
     font-family: 'Manrope', sans-serif;
     font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--color-text);
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 0;
     background: none;
     border: none;
+    appearance: none;
     cursor: pointer;
 }
 
@@ -158,7 +171,8 @@ body::before {
 
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
 }
 
 .dropdown-content {
