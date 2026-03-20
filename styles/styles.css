@@ -6,8 +6,8 @@
 }
 
 :root {
-    --color-bg: #0b0c10;
-    --color-bg-alt: #11141a;
+    --color-bg: #1b2736;
+    --color-bg-alt: #202f42;
     --color-text: #f2f5f9;
     --color-muted: #a0a6b2;
     --color-card: #121620;
@@ -21,7 +21,7 @@
     --color-card-stroke: rgba(255, 255, 255, 0.08);
     --color-ink: #0a0a0b;
     --color-glow: rgba(255, 118, 79, 0.35);
-    --mesh-4: #0b0c10;
+    --mesh-4: #1b2736;
 }
 
 html {
@@ -44,7 +44,7 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background-color: #080a0d;
+    background-color: #1a2534;
    
     background-size: 160% 160%, 170% 170%, 180% 180%, 100% 100%;
     background-position: 0% 0%, 100% 0%, 50% 100%, 0 0;
@@ -95,7 +95,7 @@ body::before {
     position: sticky;
     top: 0;
     z-index: 20;
-    background: rgba(11, 12, 16, 0.45);
+    background: rgba(19, 29, 41, 0.55);
     backdrop-filter: blur(18px) saturate(160%);
     border-radius: 0 0 24px 24px;
     border: 1px solid rgba(255, 255, 255, 0.08);
